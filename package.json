@@ -1,0 +1,19 @@
+{
+  "name": "my_business_card",
+  "version": "2.0.0",
+  "description": "Business Card",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Marcin Matczak",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3",
+    "parcel": "^2.8.3"
+  },
+  "dependencies": {
+    "sass": "^1.62.0"
+  }
+}
