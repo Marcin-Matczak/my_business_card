@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap');
+
+/* Variables */
+
+$font-header: 'Montserrat', sans-serif;
+$font-text: 'Merriweather', serif;
+
+$base-size: 12px;
+$font-size: 16px;
+
+$radius: 8px;
+
+/* Mixins */
+
+@mixin center() {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin flex($flex-direction, $align-items, $justify-content) {
+  display: flex;
+  flex-direction: $flex-direction;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin grid-layout($col-value, $row-value, $px, $gap){
+  display: grid;
+  grid-template-columns: repeat($col-value, $px);
+  grid-template-rows: repeat($row-value, $px);
+  gap: $gap;
+}
+
+.hide {
+  display: none;
+}

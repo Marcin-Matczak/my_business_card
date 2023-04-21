@@ -3,9 +3,803 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./src/images/icons/favicon.ico" />
     <link rel="stylesheet" href="./src/styles/main.scss" />
     <script defer src="./src/js/script.js"></script>
     <title>Marcin Matczak</title>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <button id="back-btn" class="back-btn r-box hide"><i class="fa-solid fa-arrow-left home-ing"></i><span class="hide">back</span></button>
+      <section id="home" class="home">
+        <div class="container">
+          <div class="box box-1 profile-box">
+            <div class="img-box">
+              <img src="" alt="profile-img" id="profileImg" class="icon-home" />
+              <h1>Hi, I`m Marcin</h1>              
+              <p>
+                Beginner front-end developer based in Lodz, Poland. Without commercial experience yet but I decided to change this state of affairs.
+              </p>
+              <p>
+                That's why I prepared a kind of "personalized business card" to introduce myself. I'd like to show the scope of my knowledge and technology stack which I use &#128578;.
+              </p>      
+              <p>
+                The form of website which you're looking at now is my own idea. I've tried to present myself, describe my skills and put covering letter in one place. 
+                I also invite you to visit my “wall” with certificates. I'm aware they are not making an impression yet but they look good in frame. 
+                If you would like to know my hobbies closer, visiting gallery with sample photos taken by me is a good choice. 
+                But one of more interesting item on website in my opinion is filterable list of my projects where I also included a tags cloud.
+              </p>              
+              <p>
+                Furthermore ...
+              </p>
+              <p>
+                I implemented analog watch, a code of which I found on the Internet and brought it to life on my website. <br>
+                I added a visitor counter which based on external API. <br>
+                I posted contact form. Yes, it's here and works based on the free Formsubmit's service. I will be grateful for any message even for a test &#128578;. 
+                Nevertheless, If you would like to contact me in more formal cases I suggest sending email by safer webmail service ( contact to me can be found under “cv” icon ). <br>
+                I almost forgot. Theme changed to dark if you click on the moon. Your choice will be saved in local storage of your web browser as default.
+              </p>
+              <p>
+                Well, that's it! I am still working to improve my website. I'm going to clean up my code and  follow DRY rule. Additionally BEM methodology, 
+                rewriting code in TypeScript and more is scheduled. Even though I haven't finished my "buisness card" yet, I've decided that it should see the light of a day right now.
+                Thanks for being here. I hope you enjoy discovering this place.
+              </p>                       
+              <p><span>&#128075;</span>  Greetings!</p> 
+              <br>        
+            </div>
+          </div>
+          <div class="box box-2">
+            <div class="info-board">GALLERY</div>
+            <img id="photoSlider"src="" alt="photoInChangingBox">
+          </div>
+          <div class="box r-box box-3">
+            <a href="https://github.com/Marcin-Matczak" target="_blank" class="rotation-Y">
+              <img src="" alt="github-img" id="gitImg" class="icon-home" />
+              <div class="description">
+                <p>Check my GitHub</p>
+              </div>
+            </a>            
+          </div>
+          <div class="box box-4">
+            <a href="https://www.linkedin.com/in/marcin-matczak-3198a925a/" target="_blank" class="rotation-X">
+              <img src="./src/images/icons/linkedin.png" alt="linkedin-img" class="icon-home" />
+              <div class="description">
+                <p>Visit my LinkedIn</p>
+              </div>
+            </a>
+          </div>
+          <div class="box box-5 contact-form">
+            <a href="mailto:marcorn.88@gmail.com">
+              <img src="./src/images/icons/mail.png" alt="mail-img" class="icon-home"/>
+            </a>
+            <form
+              action="https://formsubmit.io/send/marcorn.88@gmail.com"
+              method="POST"
+              id="form"
+            >
+              <fieldset>
+                <legend>Contact me</legend>
+                <div id="info-msg" class="confirm hide">
+                  <div>
+                    <p>Your email has been sent. Thank`s for the message!</p>
+                  </div>
+                  <div>
+                    <img src="./src/images/icons/sent.png" alt="envelop-img" class="envelop-img"/>
+                  </div>  
+                </div>
+                <div class="content-form" id="contentForm">
+                  <div>
+                    <div class="input-group">
+                      <label for="name">Your Name</label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        maxlength="30"
+                        placeholder="Type your name"
+                        required
+                      />
+                    </div>
+                    <div class="input-group">
+                      <label for="mail">Your e-mail</label>
+                      <input
+                        type="mail"
+                        id="mail"
+                        name="mail"
+                        maxlength="30"
+                        placeholder="Type your address"
+                        required
+                      />
+                    </div>
+                    <div class="input-group">
+                      <input type="submit" value="send" class="btn-form"></button>
+                      <input name="_redirect" type="hidden" id="name" value="http://127.0.0.1:5500/src/">
+                    </div>
+                  </div>
+                  <div>
+                    <div class="input-group">
+                      <label for="msg">Your message</label>
+                      <textarea
+                        name="msg"
+                        id="msg"
+                        maxlength="150"
+                        placeholder="Type your message"
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+
+          <div class="box box-6">
+            <a class="rotation-X">
+              <img src="./src/images/icons/work-in-progress.png" alt="games-img" class="icon-home"/>
+              <div class="description">
+                <p>Under </br> Construction</p>
+              </div>
+            </a>
+          </div>
+          <div class="box r-box box-7 clock">
+            <div class="outer-clock-face">
+              <div class="marking marking-one"></div>
+                <div class="marking marking-two"></div>
+                <div class="marking marking-three"></div>
+                <div class="marking marking-four"></div>
+            </div>
+            <div class="inner-clock-face">
+              <div class="hand hour-hand"></div>
+              <div class="hand min-hand"></div>
+              <div class="hand second-hand"></div>
+            </div>
+          </div>
+          <div class="box box-8">
+            <a href="" class="rotation-X">
+              <img src="./src/images/icons/certificate.png" alt="certificates-img" class="icon-home"/>
+              <div class="description">
+                <p>My certificates</p>
+              </div>
+            </a>
+          </div>
+          <div class="box box-9">
+            <a href="" class="rotation-X">
+              <img src="./src/images/icons/projects.png" alt="projects-img" class="icon-home"/>
+              <div class="description">
+                <p>Check out </br> my projects</p>
+              </div>
+            </a>
+          </div>
+          <div class="box box-10">
+            <div class="counter">
+              <p>You are the</p>
+              <h3 id="count"></h3><sup> th</sup>
+              <p>person on my website. Thank you!</p>
+          </div>
+          </div>
+          <div class="box box-11">
+            <a href="" class="rotation-X">
+              <img src="./src/images/icons/cv.png" alt="cv-img" class="icon-home"/>
+              <div class="description">
+                <p>Take a look </br> on my CV</p>
+              </div>
+            </a>
+          </div>
+          <div class="box r-box box-12">
+            <a href="" class="rotation-Y">
+              <img src="./src/images/icons/skill.png" alt="skills-img" class="icon-home"/>
+              <div class="description">
+                <p>My Skills</p>
+              </div>
+            </a>
+          </div>
+          <button
+            class="box r-box box-13"
+            role="switch"
+            aria-label="theme mode"
+          >
+            <a href="">
+              <img src="" alt="theme-img" id="themeImg" class="icon-home"/>
+            </a>
+          </button>
+        </div>
+      </section>
+      <section id="gallery" class="hide">
+        <div class="container gallery">
+          <img src="./src/images/gallery/cat-1.png" alt="cat-photo">
+          <img src="./src/images/gallery/clouds-2.png" alt="clouds-photo">
+          <img src="./src/images/gallery/dog-3.png" alt="dog1-photo">
+          <img src="./src/images/gallery/flowers-4.png" alt="flowers-photo">
+          <img src="./src/images/gallery/food-5.png" alt="food-photo">
+          <img src="./src/images/gallery/forest-6.png" alt="forest-photo">
+          <img src="./src/images/gallery/waves-7.png" alt="waves-photo">
+          <img src="./src/images/gallery/dog-8.png" alt="dog2-photo">
+          <img src="./src/images/gallery/ship-9.png" alt="ship-photo">
+          <img src="./src/images/gallery/rabbit-10.png" alt="rabbit-photo">
+          <img src="./src/images/gallery/chimney-11.png" alt="chimney-photo">
+          <img src="./src/images/gallery/city-12.png" alt="city-photo">
+          <img src="./src/images/gallery/moto-13.png" alt="moto-photo">
+          <img src="./src/images/gallery/tent-14.png" alt="tent-photo">
+          <img src="./src/images/gallery/toadstool-15.png" alt="toadstool-photo">
+        </div>
+        <div class="popup container">
+          <img src="" alt="clicked-img" class="popup__img">
+          <button class="popup__btn previous"><i class="fa-solid fa-angles-left"></i></button>
+          <button class="popup__btn next"><i class="fa-solid fa-angles-right"></i></button>
+        </div>
+      </section>
+      <section id="certificates" class="hide">
+        <ul class="certificates">
+          <li class="certificate">
+            <img src="./src/images/certificates/certificate-coding.png" alt="certificate-coding">
+          </li>
+          <li class="certificate">
+            <img src="./src/images/certificates/certificate-css.png" alt="certificate-css">
+          </li>
+          <li class="certificate">
+            <img src="./src/images/certificates/certificate-games.png" alt="certificate-games">
+          </li>
+          <li class="certificate">
+            <img src="./src/images/certificates/certificate-html.png" alt="certificate-html">
+          </li>
+          <li class="certificate">
+            <img src="./src/images/certificates/certificate-kodilla.png" alt="certificate-kodilla">
+          </li>
+          <li class="certificate">
+            <img src="./src/images/certificates/certificate-js.png" alt="certificate-js">
+          </li>
+          <li class="certificate">
+            <img src="./src/images/certificates/certificate-rwd.png" alt="certificate-rwd">
+          </li>
+          <li class="certificate">
+            <img src="./src/images/certificates/certificate-web-dev.png" alt="certificate-web-dev">
+          </li>         
+        </ul>
+      </section>
+      <section id="cv" class="hide">
+        <div class="cv-container">
+          <aside  id="about">
+            <h2><i class="fa-regular fa-user"></i>ABOUT ME</h2>
+            <p>
+              <b>Currently,</b> I am working as a purchasing specialist in the automotive industry.  We produce extruded aluminum car roof rails for world-renowned brands.
+              From purchasing side I am responsible for developing new projects, suppliers selection, realization of purchase requisitions for various production areas, 
+              looking for opportunities of savings and price negotiations. In addition, a large part of my work is based on Enterprise Resources Planning software like SAP.
+            </p>
+            <p>
+              <b>I graduated</b> from the Technical University of Lodz, engineer by education. The knowledge gained at the university taught me logical thinking, 
+              cooperation with others, not giving up, patience and many aspects of technical knowledge which I use cooperating with technical department and suppliers.
+            </p>
+            <p>
+              <b>I have been interested in</b> computers and technical innovations since an early age. More in hardware than software formerly. And a few years ago, 
+              I desired to try or create something new. I came across a product called Raspberry Pi. Small programmable computer. Then I thought - programming maybe? 
+              I bought a book by Michael Dawson, by which I had my first contact with Python programming language. 
+              Because of private and professional reasons the adventure did not last too long and I did not buy a little raspberry in the end. 
+              But I wrote some very simple working lines of code.
+            </p>
+            <p>
+              <b>After several years</b> of working in a corporation, I came to the point when I realized that it is not the place where I would like to spend the rest of my professional career. 
+              The idea of programming came back. I like to face of challenges and decided to become a programmer. I have a strong motivation to gain new knowledge and experience. 
+              In my opinion programming is based on logical thinking and requires constant searching for solutions which I personally like so much. 
+              Rapidly changing technology forces constant learning, requires self-development what gives a lot of satisfaction. Moreover, 
+              I am motivated by the possibility of remote working. 
+              Coding anywhere, exploring the world and meeting interesting people.
+            </p>
+            <p>
+              <b>I chose front-end</b> technologies and JavaScript language because I like creating and seeing immediate effects of my work. 
+              I have a fairly sense of aesthetics in my opinion and I like to take care of details. 
+              JavaScript is a versatile programming language and gives many opportunities for further development. 
+              It is usable on the front and backend. Despite complexity of JavaScript, it was a good choice. 
+              I see the capabilities to be a Fullstack Developer or take my chances at other technologies in the future.
+            </p>
+            <p>
+              <b>Unfortunately,</b> I currently have no commercial programming experience yet. However, I hope that will change soon. 
+              I am also aware of the current popularity of looking for a job in IT and number of applicants for Junior Developer. 
+              Nevertheless I am determined and highly motivated. I would really love to start working as programmer and have the opportunity to spend more time programming. 
+              I believe that someday my potential be noticed/appreciated and I will be able to spread my wings.
+            </p>
+          </aside>
+          <article id="experience" class="article">
+            <div class="information">
+              <h3>
+                <i class="fa-solid fa-graduation-cap"></i>EDUCATION
+              </h3>
+              <p>
+                <b>Codemy S.A. - Kodilla</b><br>
+                02.2021-01.2022 <br>
+                Bootcamp Web Developer <br> <br>
+                <b>Lodz University of Technology - engineering studies</b><br />
+                10.2012-11.2016 <br>
+                Field of study: Management / Specialisation: Biomedical Engineering
+              </p>
+             
+              <h3>
+                <i class="fa-solid fa-briefcase"></i>WORK EXPERIENCE
+              </h3>              
+              <p>
+                <b>Hydro Extrusion Poland Sp. Z.o.o. - Purchasing Specialist</b><br>
+                03.2018 - till now
+                <ul>
+                  <li>Conducting automotive and savings projects</li>
+                  <li>Fulfillment of purchase requisitions in company</li>
+                  <li>Data management in SAP ERP program</li>
+                </ul>
+              </p>
+              <p>
+                <b>Contec Sp. Z o.o. - Specialist of Warehouse Management and Logistics</b><br>
+                01.2015 - 12.2017  
+                <ul>
+                  <li>Document workflow management</li>
+                  <li>Warehouse management</li>
+                  <li>Coordinating the work of warehouse employees</li>
+                </ul>
+              </p> 
+              <p>
+                <b>Contec Sp. Z o.o. - Warehouseman</b><br>
+                10.2013 - 01.2015
+                <ul>
+                  <li>Warehouse work</li>
+                  <li>Transports arranging</li>               
+                </ul>
+              </p> 
+              <p>
+                <b>Telmon Sp. Z o.o. - Telephone consultant</b><br>
+                11.2012 - 02.2013
+                <ul>
+                  <li>Sale of banking products</li>
+                  <li>Contact with the customer</li>      
+                </ul>
+              </p> 
+              <p>
+                <b>Dell Products Sp. Z o.o. - Materials Representative employee</b><br>
+                11.2010 - 10.2012
+                <ul>
+                  <li>Taking care of production line workflow continuity</li>      
+                </ul>
+              </p>
+              <p>
+                <b>Silver Screen Sp. Z o.o. - Customer service employee</b><br>
+                11.2010 - 10.2012
+                <ul>
+                  <li>Customer service</li>
+                  <li>Ticket sale</li>
+                </ul>
+              </p>
+              <h3>
+                <i class="fa-solid fa-message"></i>CONTACT
+              </h3>
+              <a href="mailto:marcorn.88@gmail.com">marcorn.88@gmail.com</a>
+              <p class="clause"><i>
+                I agree to the processing of personal data provided in this website only for realising the recruitment process pursuant to the 
+                Personal Data Protection Act of 10 May 2018 (Journal of Laws 2018, item 1000) and in agreement with Regulation (EU) 2016/679 of the 
+                European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal 
+                data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation).
+              </p></i>
+            </div>  
+          </article>
+        </div>  
+      </section>
+      <section id="skills" class="hide">
+        <table>
+          <thead>
+            <tr>
+              <th colspan="2">
+                <h3>My knowledge in programming and technology stack</h3> 
+              </th>
+            </tr>     
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="./src/images/logos/html.png" alt="html-logo"></td>
+              <td><span>9/10</span>I have knowledge about the structure of websites, its markup and semantics.</td>
+            </tr>
+            <tr>
+              <td><img src="./src/images/logos/css3.png" alt="css-logo"></td>
+              <td><span>8/10</span>I have no difficulty in using selectors and styling HTML elements. I can also create a Responsive Web Design.</td>
+            </tr>
+            <tr>
+              <td><img src="./src/images/logos/javascript.png" alt="js-logo"></td>
+              <td><span>7/10</span>I understand the basics and concepts of JavaScript language such as: variables, functions, loops, arrays, events, asynchronous JS, DOM, classes, references and OOP.</td>
+            </tr>
+            <tr>
+              <td><img src="./src/images/logos/sass.png" alt="sass-logo"></td>
+              <td><span>7/10</span>I can simplify and split styles by using preprocessor's variables, partials, nested rules, mixins and media queries.</td>
+            </tr>
+            <tr>
+              <td><img src="./src/images/logos/bootstrap.png" alt="bootstrap-logo"></td>
+              <td><span>7/10</span>I understand read documentation so I know how to use library like Bootstrap to build simply RWD layout of website.</td>
+            </tr>
+            <tr>
+              <td><img src="./src/images/logos/git.png" alt="git-logo"></td>
+              <td><span>4/10</span>Probably I know a tiny fraction of git's command and capabilities but at the moment it is enough for me to create commits and simple projects.</td>
+            </tr>
+            <tr>
+              <td><img src="./src/images/logos/npm.png" alt="npm-logo"></td>
+              <td><span>8/10</span>I use npm as a package manager to manage the frontend layer of created pages.</td>
+            </tr>
+            <tr>
+              <td><img src="./src/images/logos/react.png" alt="react-logo"></td>
+              <td><span>5/10</span>I understand main idea of components. I can create a simple application using React library and JSX syntax. 
+                Unfortunately, I had the pleasure of working on the older version and I need to improve my hooks skills.</td>
+            </tr>
+            <tr>
+              <td><img src="./src/images/logos/redux.png" alt="redux-logo"></td>
+              <td><span>3/10</span>I understand how application's state are managed by Redux, unfortunately without much experience in practice.</td>
+            </tr>
+            <tr>
+              <td><img src="./src/images/logos/json.png" alt="json-logo"></td>
+              <td><span>4/10</span>Elementary knowledge of storing data on the server and downloading them dynamically.</td>
+            </tr>      
+            <tr>
+              <td><img src="./src/images/logos/handlebars.png" alt="handlebars-logo"></td>
+              <td><span>5/10</span>I can use simple Handlebars to compile templates into JavaScript functions.</td>
+            </tr>
+            <tr>
+              <td><img src="./src/images/logos/typescript.png" alt="ts-logo"></td>
+              <td><span>2/10</span>I understand the general assumptions of the language, but after one online tutorial I can't be proud of my skills in this area. 
+                I hope that will change soon because I know how important that language is right now.</td>
+            </tr>
+            <tr>
+              <td><img src="./src/images/logos/webpack.png" alt="webpack-logo"></td>
+              <td><span>3/10</span>I have a little experience working with Webpack. But I understand the idea of creating "tasks" to get started working on the project.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="projects" class="hide">
+        <div class="flex-wrapper">
+          <aside class="sidebar">
+          <h2 class="heading">Projects</h2>
+          <ul class="list titles">
+          </ul>
+          </aside>
+          <section class="projects-wrapper" id="projects-wrapper">
+          <div class="short-instruction active"><h5>Select a project from the list...</h5></div>  
+          <article class="project" id="project-1" data-tags="React Redux" data-author="developed by: Bootcamp">
+            <h3 class="project-title">To-Do</h3>
+            <img src="./src/images/projects/todo.png" alt="todo-img">
+            <p class="project-author"></p>
+            <div class="project-content">
+              <p>
+                To-do app for adding and editing targets . With ability to add separate groups. 
+                Included filtering and searching for a tasks. Moreover, additional subpages for add some notes. App was written in an older version of React. 
+                I am moving it to a separate repo <a href="https://github.com/Marcin-Matczak/student_shelf_react_app" target="_blank">"Student Shelf"</a> and developing in the latest React 18, Redux and Router versions. Works in progress.
+              </p>
+            </div>
+            <h5>My part in this project:</h5>
+            <ul>
+              <li>
+                I created some function and class components
+              </li>
+              <li>
+                refactoring of lists and columns
+              </li>
+              <li>
+                data migration to Redux
+              </li>
+              <li>
+                functionality of adding columns
+              </li>
+              <li>
+                development of filtering functionality
+              </li>
+              <li>
+                implementation of React Router
+              </li>
+            </ul>
+            <div class="project-tags">
+              <p><strong>Tags:</strong></p>
+              <ul class="list list-horizontal">
+              </ul>
+            </div>
+            <i class="fa-solid fa-link"></i>
+            <a href="https://to-do-app-marcin.herokuapp.com/" target="_blank" class="link">Visit app <span class="link-border"></span></a>
+          </article>
+          <article class="project" id="project-2" data-tags="CSS HTML " data-author="developed by: Me">
+            <h3 class="project-title">Cruises</h3>
+            <img src="./src/images/projects/captain.png" alt="cruises-img">
+            <p class="project-author"></p>
+            <div class="project-content">
+              <p>
+                Great website template for a shipowner or sea expedition organizer. Atmospheric design.
+              </p>              
+            </div>
+            <div class="project-tags">
+              <p><strong>Tags:</strong></p>
+              <ul class="list list-horizontal">
+              </ul>
+            </div>
+            <i class="fa-solid fa-link"></i>
+            <a href="https://marcin-matczak.github.io/simply_website/" target="_blank" class="link">Visit website <span class="link-border"></span></a>
+          </article>
+          <article class="project" id="project-3" data-tags="HTML CSS Sass" data-author="developed by: Me">
+            <h3 class="project-title">Retro Rental</h3>
+            <img src="./src/images/projects/retro.png" alt="retro-img">
+            <p class="project-author"></p>
+            <div class="project-content">
+              <p>
+                A good base to develop rental website of cassettes, vinyl records or other old equipment. Interesting design in retro style.
+              </p>              
+            </div>
+            <div class="project-tags">
+              <p><strong>Tags:</strong></p>
+              <ul class="list list-horizontal">
+              </ul>
+            </div>
+            <i class="fa-solid fa-link"></i>
+            <a href="https://marcin-matczak.github.io/another_simply_website/" target="_blank" class="link">Visit website <span class="link-border"></span></a>
+          </article>
+          <article class="project" id="project-4" data-tags="HTML Sass" data-author="developed by: Me">
+            <h3 class="project-title">Business Portal</h3>
+            <img src="./src/images/projects/profile.png" alt="profile-img">
+            <p class="project-author"></p>
+            <div class="project-content">
+              <p>
+                Admin panel or business portal template to develop.
+              </p>
+              <a href="https://marcin-matczak.github.io/Solo_Project/" target="_blank">Visit website</a>
+            </div>
+            <div class="project-tags">
+              <p><strong>Tags:</strong></p>
+              <ul class="list list-horizontal">
+              </ul>
+            </div>
+            <i class="fa-solid fa-link"></i>
+            <a href="https://marcin-matczak.github.io/Solo_Project/" target="_blank" class="link">Visit website <span class="link-border"></span></a>
+          </article>
+          <article class="project" id="project-5" data-tags="JSON" data-author="developed by: Bootcamp">
+            <h3 class="project-title">Task Runner</h3>
+            <img src="./src/images/projects/task.png" alt="task-img">
+            <p class="project-author"></p>
+            <div class="project-content">
+              <p>
+                Personalized task runner settings.
+              </p>              
+            </div>
+            <div class="project-tags">
+              <p><strong>Tags:</strong></p>
+              <ul class="list list-horizontal">
+              </ul>
+            </div>
+            <i class="fa-solid fa-link"></i>
+            <a href="https://github.com/Marcin-Matczak/task_runner" target="_blank" class="link">Check the code <span class="link-border"></span></a>
+          </article>
+          <article class="project" id="project-6" data-tags="HTML CSS" data-author="developed by: Me">
+            <h3 class="project-title">Curriculum Vitae</h3>
+            <img src="./src/images/projects/cv.png" alt="cv-img">
+            <p class="project-author"></p>
+            <div class="project-content">
+              <p>
+                My simple curriculum vitae website.
+              </p>             
+            </div>
+            <div class="project-tags">
+              <p><strong>Tags:</strong></p>
+              <ul class="list list-horizontal">
+              </ul>
+            </div>
+            <i class="fa-solid fa-link"></i>
+            <a href="https://marcin-matczak.github.io/curriculum_vitae/" target="_blank" class="link">Visit website <span class="link-border"></span></a>
+          </article>
+          <article class="project" id="project-7" data-tags="HTML Sass Bootstrap" data-author="developed by: Me">
+            <h3 class="project-title">Skate Shop</h3>
+            <img src="./src/images/projects/skateboard.png" alt="skateboard-img">
+            <p class="project-author"></p>
+            <div class="project-content">
+              <p>
+                From my youthful passion for skateboarding, I created a base for skateshop and content about this kind of lifestyle. 
+                The code is based on the Bootstrap framework.
+              </p>              
+            </div>
+            <div class="project-tags">
+              <p><strong>Tags:</strong></p>
+              <ul class="list list-horizontal">
+              </ul>
+            </div>
+            <i class="fa-solid fa-link"></i>
+            <a href="https://marcin-matczak.github.io/skateshop_draft_bootstrap_5/" target="_blank" class="link">Visit website <span class="link-border"></span></a>
+          </article>
+          <article class="project" id="project-8" data-tags="JavaScript Sass Handlebars" data-author="developed by: Bootcamp">
+            <h3 class="project-title">Blog</h3>
+            <img src="./src/images/projects/blog.png" alt="blog-img">
+            <p class="project-author"></p>
+            <div class="project-content">
+              <p>
+                A great base to develop blog site. Includes filtering options by articles or authors. In addition, a tag cloud is also implemented.
+              </p> 
+              <h5>My part in this project:</h5>
+              <ul>
+                <li>
+                  development of event handler
+                </li>
+                <li>
+                  creating a function to generate a list of links
+                </li>
+                <li>
+                  development of functionality of filtering lists and tag clouds 
+                </li>
+              </ul>             
+            </div>
+            <div class="project-tags">
+              <p><strong>Tags:</strong></p>
+              <ul class="list list-horizontal">
+              </ul>
+            </div>
+            <i class="fa-solid fa-link"></i>
+            <a href="https://marcin-matczak.github.io/project_blog/" target="_blank" class="link">Visit website <span class="link-border"></span></a>
+          </article>
+          <article class="project" id="project-9" data-tags="HTML Sass JavaScript" data-author="developed by: Bootcamp">
+            <h3 class="project-title">Game</h3>
+            <img src="./src/images/projects/game.png" alt="game-img">
+            <p class="project-author"></p>
+            <div class="project-content">
+              <p>
+                A popular and well-known "Rock paper scissors"game with retro graphics design from 80's.
+              </p>              
+              <h5>My part in this project:</h5>
+              <ul>
+                <li>
+                  recognizing the movement of computer and player
+                </li>
+                <li>
+                  displaying results
+                </li>
+                <li>
+                  transferring game logic to functions
+                </li>
+                <li>
+                  buttons implementation
+                </li>
+                <li>
+                  game graphic layout
+                </li>
+                <li>
+                  improving code quality
+                </li>
+              </ul>
+            </div>
+            <div class="project-tags">
+              <p><strong>Tags:</strong></p>
+              <ul class="list list-horizontal">
+              </ul>
+            </div>
+            <i class="fa-solid fa-link"></i>
+            <a href="https://marcin-matczak.github.io/rock_paper_scissors_game/" target="_blank" class="link">Play the game <span class="link-border"></span></a>
+          </article>
+          <article class="project" id="project-10" data-tags="HTML Sass JavaScript Handlebars" data-author="developed by: Bootcamp">
+            <h3 class="project-title">Book App</h3>
+            <img src="./src/images/projects/book.png" alt="books-img">
+            <p class="project-author"></p>
+            <div class="project-content">
+              <p>
+                A simple application with a list of books that can be implemented, for example, on bookstore website. 
+                Includes option to adding items to the list of "favorites", simple filtering and rating.
+              </p>
+              <h5>My part in this project:</h5>
+              <ul>
+                <li>
+                  rendered HTML representation by Handlebars
+                </li>
+                <li>
+                  adding books to favourites
+                </li>
+                <li>
+                  implemened event delegation
+                </li>
+                <li>
+                  a part of the functionality of filtering books using a form
+                </li>
+              </ul>
+            </div>
+            <div class="project-tags">
+              <p><strong>Tags:</strong></p>
+              <ul class="list list-horizontal">
+              </ul>
+            </div>
+            <i class="fa-solid fa-link"></i>
+            <a href="https://github.com/Marcin-Matczak/books_app" target="_blank" class="link">Check application code <span class="link-border"></span></a>
+          </article>
+          <article class="project" id="project-11" data-tags="HTML Sass JavaScript Handlebars JSON AJAX" data-author="developed by: Bootcamp">
+            <h3 class="project-title">Pizzeria</h3>
+            <img src="./src/images/projects/pizza.png" alt="pizza-img">
+            <p class="project-author"></p>
+            <div class="project-content">
+              <p>
+                Website of a fictitious pizzeria with the ability to choosing pizza ingredients, 
+                placing orders, booking tables, adding products to the basket and checking the orders.
+              </p>
+              <h5>My part in this project:</h5>
+              <ul>
+                <li>
+                  generating DOM elements
+                </li>
+                <li>
+                  dropdown product menu
+                </li>
+                <li>
+                  calculation of product prices with selected ingredients
+                </li>
+                <li>
+                  visualization of ingredients after adding to the product
+                </li>
+                <li>
+                  development of the widget class and validation of values
+                </li>
+                <li>
+                  development of the cart class 
+                </li>
+                <li>
+                  summary of order to be sent to the server
+                </li>
+                <li>
+                  development of booking table section
+                </li>
+              </ul>              
+            </div>
+            <div class="project-tags">
+              <p><strong>Tags:</strong></p>
+              <ul class="list list-horizontal">
+              </ul>
+            </div>
+            <i class="fa-solid fa-link"></i>
+            <a href="https://pizza-app-project.herokuapp.com/" target="_blank" class="link">Visit website <span class="link-border"></span></a>
+          </article>
+          <article class="project" id="project-12" data-tags="TypeScript" data-author="developed by: Online course">
+            <h3 class="project-title">Notebook</h3>
+            <img src="./src/images/projects/list.png" alt="list-img">
+            <p class="project-author"></p>
+            <div class="project-content">
+              <p>
+                My first contact with TypeScript. Design of a simple to-do application based on an online tutorial.
+              </p>              
+            </div>
+            <div class="project-tags">
+              <p><strong>Tags:</strong></p>
+              <ul class="list list-horizontal">
+              </ul>
+            </div>
+            <i class="fa-solid fa-link"></i>
+            <a href="https://marcin-matczak.github.io/typesctipt_novice/" target="_blank" class="link">Add your task <span class="link-border"></span></a>
+          </article>
+          </section>
+          <aside class="sidebar">
+          <h2 class="heading">Tags</h2>
+          <ul class="list tags">
+          </ul>
+          <h2 class="heading">Authors</h2>
+          <ul class="list authors">
+          </ul>
+        </aside>
+        </div>
+      </section>
+      <footer class="copyright">© Marcin Matczak 2022</footer>
+    </main>
+
+    <!--Scripts-->
+
+  <script id="template-project-link" type="text/x-handlebars-template">
+    <li><a href="#{{ id }}"><span>{{ title }}</span></a></li>
+  </script>
+
+  <script id="template-tag-link" type="text/x-handlebars-template">
+    <li><a href="#tag-{{ id }}"><span>{{ title }}</span></a></li>
+  </script>
+
+  <script id="template-author-link" type="text/x-handlebars-template">
+    <a href="#author-{{ id }}"><span>{{ title }}</span></a>
+  </script>
+
+  <script id="template-tag-cloud-link" type="text/x-handlebars-template">
+    {{#each tags}}
+    <li><a href="#tag-{{ tag }}" class="{{ className }}">{{ tag }}</a></li>
+    {{/each}}
+  </script>
+
+  <script id="template-author-cloud-link" type="text/x-handlebars-template">
+    {{#each authors}}
+    <li><a href="#author-{{ authorId }}" class="{{ className }}">{{ author }}</a></li>
+    {{/each}}
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+  <script src="https://kit.fontawesome.com/edb01b40e4.js" crossorigin="anonymous"></script>
+  </body>
 </html>
