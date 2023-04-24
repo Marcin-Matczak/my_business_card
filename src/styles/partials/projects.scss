@@ -1,4 +1,4 @@
-#projects {
+.main__projects {
   @include center();
   width: 92%;
   height: 90%;
@@ -280,7 +280,7 @@ a {
     display: inline;
   }
   
-  #projects {
+  .main__projects {
     padding: 10px;
   }
 
@@ -354,7 +354,7 @@ a {
     }
   }
   
-  #projects {
+  .main__projects {
     padding: 10px;
   }
 

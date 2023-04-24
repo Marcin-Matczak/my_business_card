@@ -1,4 +1,4 @@
-#skills {
+.main__skills {
   @include center();
   width: 92%;
   height: 90%;
@@ -147,18 +147,18 @@ td {
   }
 }
 
-#skills::-webkit-scrollbar {
+.main__skills::-webkit-scrollbar {
   width: 8px;
 }
 
-#skills::-webkit-scrollbar-track {
+.main__skills::-webkit-scrollbar-track {
   border-radius: 8px;
   background-color: transparent;
   border: 1px solid var(--shadow);
   box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
 }
 
-#skills::-webkit-scrollbar-thumb {
+.main__skills::-webkit-scrollbar-thumb {
   border-radius: 8px;
   background-color: var(--main);
   border: 2px solid var(--shadow);

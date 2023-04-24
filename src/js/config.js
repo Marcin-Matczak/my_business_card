@@ -1,18 +1,18 @@
 export const select = {
   // Main page
-  homeSection: document.getElementById('home'),
-  gallerySection: document.getElementById('gallery'),
-  backButton: document.getElementById('back-btn'),
-  galleryBox: document.querySelector('.box-2'),
+  homeSection: document.querySelector('.section-home'),
+  gallerySection: document.querySelector('.main__gallery'),
+  backButton: document.querySelector('.main__button'),
+  galleryBox: document.querySelector('.section-home__box--gallery'),
   certificatesBox: document.querySelector('.box-8'),
-  certificatesSection: document.getElementById('certificates'),
-  cvSection: document.getElementById('cv'),
+  certificatesSection: document.querySelector('.main__certificates'),
+  cvSection: document.querySelector('.main__cv'),
   cvBox: document.querySelector('.box-11'),
-  skillsSection: document.getElementById('skills'),
+  skillsSection: document.querySelector('.main__skills'),
   skillsBox: document.querySelector('.box-12'),
-  projectsSection: document.getElementById('projects'),
+  projectsSection: document.querySelector('.main__projects'),
   projectsBox: document.querySelector('.box-9'),
-  photoChangingBox: document.getElementById('photoSlider'),
+  photoChangingBox: document.querySelector('.gallery-box__image'),
 
   // Contact form
   contactContent: document.getElementById('contentForm'),
@@ -21,7 +21,7 @@ export const select = {
   infoMessage: document.getElementById('info-msg'),
 
   // Gallery
-  thumbnails: document.querySelectorAll('.gallery img'),
+  thumbnails: document.querySelectorAll('.main__gallery img'),
   popupWrapper: document.querySelector('.popup'),
   popupWindow: document.querySelector('.popup__img'),
   nextPhotoButton: document.querySelector('.next'),
@@ -35,7 +35,7 @@ export const select = {
   // Theme
   switchThemeButton: document.getElementById('themeImg'),
   gitImgBox: document.getElementById('gitImg'),
-  profileImg: document.getElementById('profileImg'),
+  profileImg: document.querySelector('.intro-box__image'),
 
   // Others
   certificates: document.querySelectorAll('.certificate'),

@@ -2,26 +2,16 @@
   box-sizing: border-box;
 }
 
-html {
-  @include center();
-}
-
 body {
-  @include center();
   background-color: var(--bg);
   margin: 0;
   font-family: $font-text;
 }
 
-main {
+.main {
   border-radius: $radius;
   box-shadow: 10px 10px 17px -5px var(--shadow);
-  background-color: var(--bg);
   border: 2px solid var(--shadow);
-  position: relative;
-}
-
-h1 {
-  font-family: $font-header;
-  text-transform: uppercase;
+  position: absolute;
+  @include center();
 }

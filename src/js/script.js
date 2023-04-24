@@ -1,4 +1,4 @@
-import { select, templates, opts } from './config.js';
+import { select, templates, opts, classNames } from './config.js';
 
 /** Theme switch functionality */
 
@@ -12,27 +12,27 @@ function getCurrentTheme() {
   return theme;
 }
 
+const lightIcons = function () {
+  select.switchThemeButton.src = './src/images/icons/moon.png';
+  select.gitImgBox.src = './src/images/icons/git-dark.png';
+  select.profileImg.src = './src/images/icons/profile.png';
+};
+
+const darkIcons = function () {
+  select.switchThemeButton.src = './src/images/icons/sun.png';
+  select.gitImgBox.src = './src/images/icons/github-light.png';
+  select.profileImg.src = './src/images/icons/profile-dark.png';
+};
+
 function loadTheme(theme) {
-  if (theme === 'light') {
-    select.switchThemeButton.src = './src/images/icons/moon.png';
-    select.gitImgBox.src = './src/images/icons/git-dark.png';
-    select.profileImg.src = './src/images/icons/profile.png';
-  } else {
-    select.switchThemeButton.src = './src/images/icons/sun.png';
-    select.gitImgBox.src = './src/images/icons/github-light.png';
-    select.profileImg.src = './src/images/icons/profile-dark.png';
-  }
+  theme === 'light' ? lightIcons() : darkIcons();
   select.root.setAttribute('theme-mode', `${theme}`);
 }
 
 select.switchThemeButton.addEventListener('click', event => {
   event.preventDefault();
   let theme = getCurrentTheme();
-  if (theme === 'dark') {
-    theme = 'light';
-  } else {
-    theme = 'dark';
-  }
+  theme === 'dark' ? (theme = 'light') : (theme = 'dark');
   localStorage.setItem('marcin_theme', `${theme}`);
   loadTheme(theme);
 });
@@ -43,71 +43,63 @@ window.addEventListener('DOMContentLoaded', () => {
 
 /** Contact form handling */
 
-function mailSent() {
-  select.contactContent.classList.add('hide');
-  select.infoMessage.classList.remove('hide');
-}
-
-function placeOrder(form) {
-  setTimeout(form.submit(), 3500);
-}
-
 select.btnForm.addEventListener('click', event => {
   event.preventDefault();
-  mailSent();
-  placeOrder(select.formFunctionality);
+  select.contactContent.classList.add(classNames.hide);
+  select.infoMessage.classList.remove(classNames.hide);
+  setTimeout(select.formFunctionality.submit(), 3500);
 });
 
 /** Home buttons functionality */
 
 const backOne = () => {
-  if (select.popupWrapper.classList.contains('active')) {
-    select.popupWrapper.classList.remove('active');
+  if (select.popupWrapper.classList.contains(classNames.active)) {
+    select.popupWrapper.classList.remove(classNames.active);
   } else {
-    select.homeSection.classList.remove('hide');
-    select.backButton.classList.add('hide');
-    select.gallerySection.classList.add('hide');
-    select.certificatesSection.classList.add('hide');
-    select.cvSection.classList.add('hide');
-    select.skillsSection.classList.add('hide');
-    select.projectsSection.classList.add('hide');
+    select.homeSection.classList.remove(classNames.hide);
+    select.backButton.classList.add(classNames.hide);
+    select.gallerySection.classList.add(classNames.hide);
+    select.certificatesSection.classList.add(classNames.hide);
+    select.cvSection.classList.add(classNames.hide);
+    select.skillsSection.classList.add(classNames.hide);
+    select.projectsSection.classList.add(classNames.hide);
   }
 };
 
 select.galleryBox.addEventListener('click', event => {
   event.preventDefault();
-  select.homeSection.classList.add('hide');
-  select.backButton.classList.remove('hide');
-  select.gallerySection.classList.remove('hide');
+  select.homeSection.classList.add(classNames.hide);
+  select.backButton.classList.remove(classNames.hide);
+  select.gallerySection.classList.remove(classNames.hide);
 });
 
 select.certificatesBox.addEventListener('click', event => {
   event.preventDefault();
-  select.homeSection.classList.add('hide');
-  select.backButton.classList.remove('hide');
-  select.certificatesSection.classList.remove('hide');
+  select.homeSection.classList.add(classNames.hide);
+  select.backButton.classList.remove(classNames.hide);
+  select.certificatesSection.classList.remove(classNames.hide);
 });
 
 select.cvBox.addEventListener('click', event => {
   event.preventDefault();
-  select.homeSection.classList.add('hide');
-  select.backButton.classList.remove('hide');
-  select.cvSection.classList.remove('hide');
+  select.homeSection.classList.add(classNames.hide);
+  select.backButton.classList.remove(classNames.hide);
+  select.cvSection.classList.remove(classNames.hide);
 });
 
 select.skillsBox.addEventListener('click', event => {
   event.preventDefault();
-  select.homeSection.classList.add('hide');
-  select.backButton.classList.remove('hide');
-  select.skillsSection.classList.remove('hide');
+  select.homeSection.classList.add(classNames.hide);
+  select.backButton.classList.remove(classNames.hide);
+  select.skillsSection.classList.remove(classNames.hide);
   setAnimation();
 });
 
 select.projectsBox.addEventListener('click', event => {
   event.preventDefault();
-  select.homeSection.classList.add('hide');
-  select.backButton.classList.remove('hide');
-  select.projectsSection.classList.remove('hide');
+  select.homeSection.classList.add(classNames.hide);
+  select.backButton.classList.remove(classNames.hide);
+  select.projectsSection.classList.remove(classNames.hide);
 });
 
 select.backButton.addEventListener('click', event => {
@@ -122,27 +114,23 @@ let currentImgSrc;
 
 select.thumbnails.forEach((thumbnail, index) => {
   thumbnail.addEventListener('click', event => {
-    select.popupWrapper.classList.add('active');
+    select.popupWrapper.classList.add(classNames.active);
     select.popupWindow.src = event.target.src;
     currentImgSrc = index;
   });
 });
 
 select.nextPhotoButton.addEventListener('click', () => {
-  if (currentImgSrc === select.thumbnails.length - 1) {
-    currentImgSrc = 0;
-  } else {
-    currentImgSrc++;
-  }
+  currentImgSrc === select.thumbnails.length - 1
+    ? (currentImgSrc = 0)
+    : currentImgSrc++;
   select.popupWindow.src = select.thumbnails[currentImgSrc].src;
 });
 
 select.previousPhotoButton.addEventListener('click', () => {
-  if (currentImgSrc === 0) {
-    currentImgSrc = select.thumbnails.length - 1;
-  } else {
-    currentImgSrc--;
-  }
+  currentImgSrc === 0
+    ? (currentImgSrc = select.thumbnails.length - 1)
+    : currentImgSrc--;
   select.popupWindow.src = select.thumbnails[currentImgSrc].src;
 });
 
@@ -152,18 +140,14 @@ const photoSliderArray = [];
 
 let randomNumber = Math.floor(Math.random() * 15) + 1; // losowa liczba od 0 do 15
 
-for (let thumbnail of select.thumbnails) {
+select.thumbnails.forEach(thumbnail => {
   const imgSrc = thumbnail.getAttribute('src');
   photoSliderArray.push(imgSrc);
-}
+});
 
 const changeSlide = function () {
   randomNumber++;
-
-  if (randomNumber > 14) {
-    randomNumber = 0;
-  }
-
+  if (randomNumber > 14) randomNumber = 0;
   let randomIndexOfArray = photoSliderArray[randomNumber];
   select.photoChangingBox.src = randomIndexOfArray;
   setTimeout(changeSlide, 5000);
@@ -195,9 +179,9 @@ setDate();
 /** select.certificates */
 
 const removeZoom = function () {
-  for (let certificate of select.certificates) {
-    certificate.classList.remove('zoom');
-  }
+  select.certificates.forEach(certificate =>
+    certificate.classList.remove('zoom')
+  );
 };
 
 const clickHandler = function (event) {
@@ -228,9 +212,7 @@ function animation() {
 }
 
 const removeAnimation = function () {
-  for (let icon of select.techStackIcons) {
-    icon.classList.remove('move');
-  }
+  select.techStackIcons.forEach(icon => icon.classList.remove('move'));
 };
 
 const setAnimation = function () {
@@ -250,21 +232,21 @@ const setAnimation = function () {
     const activeLinks = document.querySelectorAll('.titles a.active');
 
     for (let activeLink of activeLinks) {
-      activeLink.classList.remove('active');
+      activeLink.classList.remove(classNames.active);
     }
 
-    clickedElement.classList.add('active');
+    clickedElement.classList.add(classNames.active);
     const activeArticles = document.querySelectorAll(
       '.projects-wrapper .active'
     );
 
     for (let activeArticle of activeArticles) {
-      activeArticle.classList.remove('active');
+      activeArticle.classList.remove(classNames.active);
     }
 
     const articleSelector = clickedElement.getAttribute('href');
     const targetArticle = document.querySelector(articleSelector);
-    targetArticle.classList.add('active');
+    targetArticle.classList.add(classNames.active);
   };
 
   const generateTitleLinks = function (customSelector = '') {
@@ -357,16 +339,16 @@ const setAnimation = function () {
     const clickedElement = this;
     const href = clickedElement.getAttribute('href');
     const tag = href.replace('#tag-', '');
-    const activeTagLinks = document.querySelectorAll(`a.active[href^="#tag-"]`);
+    const activeTagLinks = document.querySelectorAll('a.active[href^="#tag-"]');
 
     for (let activeTagLink of activeTagLinks) {
-      activeTagLink.classList.remove('active');
+      activeTagLink.classList.remove(classNames.active);
     }
 
     const tagLinks = document.querySelectorAll(`a[href="${href}"]`);
 
     for (let tagLink of tagLinks) {
-      tagLink.classList.add('active');
+      tagLink.classList.add(classNames.active);
     }
 
     generateTitleLinks('[data-tags~="' + tag + '"]');
@@ -429,13 +411,13 @@ const setAnimation = function () {
     );
 
     for (let activeAuthorLink of activeAuthorLinks) {
-      activeAuthorLink.classList.remove('active');
+      activeAuthorLink.classList.remove(classNames.active);
     }
 
     const authorLinks = document.querySelectorAll(`a[href="${href}"]`);
 
     for (let authorLink of authorLinks) {
-      authorLink.classList.add('active');
+      authorLink.classList.add(classNames.active);
     }
 
     generateTitleLinks(`[data-author="${author}"]`);
