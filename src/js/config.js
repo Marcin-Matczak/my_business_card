@@ -4,21 +4,21 @@ export const select = {
   gallerySection: document.querySelector('.main__gallery'),
   backButton: document.querySelector('.main__button'),
   galleryBox: document.querySelector('.section-home__box--gallery'),
-  certificatesBox: document.querySelector('.box-8'),
+  certificatesBox: document.querySelector('.section-home__box--certificates'),
   certificatesSection: document.querySelector('.main__certificates'),
   cvSection: document.querySelector('.main__cv'),
-  cvBox: document.querySelector('.box-11'),
+  cvBox: document.querySelector('.section-home__box--cv'),
   skillsSection: document.querySelector('.main__skills'),
-  skillsBox: document.querySelector('.box-12'),
+  skillsBox: document.querySelector('.section-home__box--technologies'),
   projectsSection: document.querySelector('.main__projects'),
-  projectsBox: document.querySelector('.box-9'),
+  projectsBox: document.querySelector('.section-home__box--projects'),
   photoChangingBox: document.querySelector('.gallery-box__image'),
 
   // Contact form
-  contactContent: document.getElementById('contentForm'),
-  btnForm: document.querySelector('.btn-form'),
-  formFunctionality: document.getElementById('form'),
-  infoMessage: document.getElementById('info-msg'),
+  contactContent: document.querySelector('.form__fieldset__elements'),
+  btnForm: document.querySelector('.fieldset-element__button'),
+  formFunctionality: document.getElementById('contactform'),
+  infoMessage: document.querySelector('.form__fieldset__confirm-msg'),
 
   // Gallery
   thumbnails: document.querySelectorAll('.main__gallery img'),
@@ -28,13 +28,13 @@ export const select = {
   previousPhotoButton: document.querySelector('.previous'),
 
   // Clock
-  secondHand: document.querySelector('.second-hand'),
-  minsHand: document.querySelector('.min-hand'),
-  hourHand: document.querySelector('.hour-hand'),
+  secondHand: document.querySelector('.clock-inner__hand--second'),
+  minsHand: document.querySelector('.clock-inner__hand--min'),
+  hourHand: document.querySelector('.clock-inner__hand--hour'),
 
   // Theme
-  switchThemeButton: document.getElementById('themeImg'),
-  gitImgBox: document.getElementById('gitImg'),
+  switchThemeButton: document.querySelector('.section-home__box--theme-switch'),
+  gitImgBox: document.querySelector('.link-btn__icon'),
   profileImg: document.querySelector('.intro-box__image'),
 
   // Others

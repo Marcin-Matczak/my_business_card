@@ -1,11 +1,11 @@
-.box-10{
+.section-home__box--visit-counter{
   box-shadow: inset 0px 0px 30px -10px rgba(0, 0, 0, 1);
   &:hover {
     cursor: auto;
   }
 }
 
-#count {
+.counter__value {
   display: inline;
   color: #cc0000;
   font-size: 26px;
@@ -14,7 +14,7 @@
 .counter {
   text-align: center;
   
-  p, sup {
+  .counter__descr, .counter__sup {
     font-size: 12px;
     margin: 4px;
     background: -webkit-linear-gradient(138deg, rgba(151,0,212,1) 18%, rgba(180,101,0,1) 85%);
@@ -22,7 +22,7 @@
     -webkit-text-fill-color: transparent;
   }
 
-  sup {
+  .counter__sup {
     display: inline;
   }
 }
