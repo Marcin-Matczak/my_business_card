@@ -1,7 +1,7 @@
 export const select = {
   // Main page
   homeSection: document.querySelector('.section-home'),
-  gallerySection: document.querySelector('.main__gallery'),
+  gallerySection: document.querySelector('.hobbies-gallery'),
   backButton: document.querySelector('.main__button'),
   galleryBox: document.querySelector('.section-home__box--gallery'),
   certificatesBox: document.querySelector('.section-home__box--certificates'),
@@ -21,11 +21,14 @@ export const select = {
   infoMessage: document.querySelector('.form__fieldset__confirm-msg'),
 
   // Gallery
-  thumbnails: document.querySelectorAll('.main__gallery img'),
-  popupWrapper: document.querySelector('.popup'),
-  popupWindow: document.querySelector('.popup__img'),
-  nextPhotoButton: document.querySelector('.next'),
-  previousPhotoButton: document.querySelector('.previous'),
+  thumbnails: document.querySelectorAll('.hobbies-gallery__mosaic__img'),
+  galleryContainer: document.querySelector('.hobbies-gallery__mosaic'),
+  popupWrapper: document.querySelector('.hobbies-gallery__popup'),
+  popupWindow: document.querySelector('.hobbies-gallery__popup__img'),
+  nextPhotoButton: document.querySelector('.hobbies-gallery__popup__btn--next'),
+  previousPhotoButton: document.querySelector(
+    '.hobbies-gallery__popup__btn--previous'
+  ),
 
   // Clock
   secondHand: document.querySelector('.clock-inner__hand--second'),

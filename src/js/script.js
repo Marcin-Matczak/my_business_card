@@ -138,7 +138,7 @@ select.previousPhotoButton.addEventListener('click', () => {
 
 const photoSliderArray = [];
 
-let randomNumber = Math.floor(Math.random() * 15) + 1; // losowa liczba od 0 do 15
+let randomNumber = Math.floor(Math.random() * 12) + 1;
 
 select.thumbnails.forEach(thumbnail => {
   const imgSrc = thumbnail.getAttribute('src');
@@ -147,7 +147,7 @@ select.thumbnails.forEach(thumbnail => {
 
 const changeSlide = function () {
   randomNumber++;
-  if (randomNumber > 14) randomNumber = 0;
+  if (randomNumber > 11) randomNumber = 0;
   let randomIndexOfArray = photoSliderArray[randomNumber];
   select.photoChangingBox.src = randomIndexOfArray;
   setTimeout(changeSlide, 5000);
@@ -436,14 +436,14 @@ const setAnimation = function () {
 
 /** Visitors */
 
-updateVisitCount();
+// updateVisitCount();
 
-function updateVisitCount() {
-  fetch(
-    'https://api.countapi.xyz/update/marcinm/6d7979ca-ab60-4ef7-bd3e-1e2e790d4b13/?amount=1'
-  )
-    .then(res => res.json())
-    .then(res => {
-      select.counter.innerHTML = res.value;
-    });
-}
+// function updateVisitCount() {
+//   fetch(
+//     'https://api.countapi.xyz/update/marcinm/6d7979ca-ab60-4ef7-bd3e-1e2e790d4b13/?amount=1'
+//   )
+//     .then(res => res.json())
+//     .then(res => {
+//       select.counter.innerHTML = res.value;
+//     });
+// }
