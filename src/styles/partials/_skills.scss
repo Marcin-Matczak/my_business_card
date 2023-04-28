@@ -1,4 +1,4 @@
-.main__skills {
+.section-technology {
   @include center();
   width: 92%;
   height: 90%;
@@ -10,53 +10,41 @@
   overflow-y: auto;
 }
 
-table {
+.tech-stack {
   width: 100%;
   border-collapse:separate;
   border-spacing: 4px 4px;
   font-size: 14px;
-
-  th {
+}
+  .tech-stack__item__header {
     background-color: var(--bg);
 
-    h3 {
+    .tech-stack__item__header__title {
       margin: 3px;
     }
   }
-}
 
-thead::after {
+
+.tech-stack__head::after {
   content: "";
   display: block;
   width: 100%;
   background: var(--primary);
 }
 
-tr:hover {
+.tech-stack__item:hover {
   background-color: var(--bg);
 }
 
-td:first-child {
-  width: 6%;
-  text-align: center;
-  padding: 0px;
-
-  img {
-    width: 65%;
-    margin-top: 4px;
-  }
-}
-
-td, th {
+.tech-stack__item > * {
   border: 1px solid var(--shadow);
   padding: 8px;
 }
 
-td {
-  span {
-    float: right;
+.tech-stack__item__icon > img{ 
+  width: 42px;
 }
-}
+
 
 .move {
   animation: bounce 0.9s cubic-bezier(0.59, -0.67, 0.24, 0.79) 2;
@@ -75,44 +63,20 @@ td {
 
 
 @media (max-width: 1199px){
-  td:first-child {
-    img {
+  .tech-stack__item__icon > img{
       width: 28px;
-      margin-top: 4px;
-    }
   }
 }
 
-@media (max-width: 991px){
-  td:first-child { 
-    img {
-      width: 32px;
-      padding: 4px;
-    }
-  }
-
-  @keyframes bounce {
-    0% {
-      transform: translateX(0px);
-    }
-  
-    100% {
-      transform: translateX(-40px);
-    }
-  }
-}
 
 @media (max-width: 767px){
-  table {
+  .tech-stack {
     font-size: 14px;
   }
 
-  td:first-child { 
-    img {
-      width: 43px;
-      padding: 4px;
-    }
-  }
+  .tech-stack__item__icon > img{ 
+    width: 43px;
+}
 
     @keyframes bounce {
     0% {
@@ -125,16 +89,13 @@ td {
   }
 }
 @media (max-width: 575px){
-  table {
+  .tech-stack {
     font-size: 12px;
   }
 
-  td:first-child { 
-    img {
-      width: 25px;
-      margin-top: 4px;
-    }
-  }
+  .tech-stack__item__icon > img{ 
+    width: 25px;
+}
 
   @keyframes bounce {
     0% {
@@ -147,18 +108,18 @@ td {
   }
 }
 
-.main__skills::-webkit-scrollbar {
+.section-technology::-webkit-scrollbar {
   width: 8px;
 }
 
-.main__skills::-webkit-scrollbar-track {
+.section-technology::-webkit-scrollbar-track {
   border-radius: 8px;
   background-color: transparent;
   border: 1px solid var(--shadow);
   box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
 }
 
-.main__skills::-webkit-scrollbar-thumb {
+.section-technology::-webkit-scrollbar-thumb {
   border-radius: 8px;
   background-color: var(--main);
   border: 2px solid var(--shadow);

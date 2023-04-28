@@ -8,7 +8,7 @@ export const select = {
   certificatesSection: document.querySelector('.section-certificates'),
   cvSection: document.querySelector('.section-cv'),
   cvBox: document.querySelector('.section-home__box--cv'),
-  skillsSection: document.querySelector('.main__skills'),
+  skillsSection: document.querySelector('.section-technology'),
   skillsBox: document.querySelector('.section-home__box--technologies'),
   projectsSection: document.querySelector('.main__projects'),
   projectsBox: document.querySelector('.section-home__box--projects'),
