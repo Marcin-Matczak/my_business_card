@@ -1,4 +1,4 @@
-.main__cv {
+.section-cv {
   @include center();
   width: 92%;
   height: 90%;
@@ -8,7 +8,7 @@
   overflow: hidden;
 }
 
-.cv-container {
+.section-cv__container {
   display: flex;
   flex-direction: row;
   position: relative;
@@ -16,38 +16,38 @@
   height: 100%;
 }
 
-aside {
+.about {
   flex: 4;
   color: var(--text);
   background-color: var(--primary);
   overflow-y: auto;
 
-  h2 {
+  &__title {
     text-align: center;
 
-    i {
+    em {
       margin-right: 15px;
     }
   }
 
-  p {
+  .about__paragraph {
     margin: 0 8px 25px 12px;
   }
 }
 
-.article {
+.experience {
   flex: 6;
   color: var(--text);
   background-color: var(--bg);
   overflow-y: auto;
   position: relative;
-  padding-bottom: 20px;
+  padding: 20px 0 20px 0;
 
   > * {
-    margin: 0 20px 0 20px;
+    margin: 0 20px 20px 20px;
   }
 
-  h3 {
+  &__title {
     text-decoration: underline;
     margin-bottom: 20px;
 
@@ -56,7 +56,7 @@ aside {
     }
   }
 
-  h3:not(:first-child){
+  &__title:not(:first-child){
     margin-top: 60px;
   }
 }
@@ -65,12 +65,12 @@ aside {
   margin-top: 20px;
 }
 
-.clause {
+.experience__paragraph--clause {
   margin-top: 70px;
   font-size: 11px;
 }
 
-a:link { 
+.experience__email:link { 
   text-decoration: none; 
   color: var(--text);
 
@@ -81,11 +81,11 @@ a:link {
 
 @media (max-width: 766px){
   
-  .cv-container {
+  .section-cv__container {
     display: flex;
     flex-direction: column;
 
-    .article {
+    .experience {
       border-top: 2px solid var(--shadow);
     }
   }
@@ -94,35 +94,35 @@ a:link {
 
 /* Scrollbars */
 
-#about::-webkit-scrollbar {
+.about::-webkit-scrollbar {
   width: 8px;
 }
 
-#about::-webkit-scrollbar-track {
+.about::-webkit-scrollbar-track {
   border-radius: 8px;
   background-color: transparent;
   border: 1px solid var(--shadow);
   box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
 }
 
-#about::-webkit-scrollbar-thumb {
+.about::-webkit-scrollbar-thumb {
   border-radius: 8px;
   background-color: var(--main);
   border: 2px solid var(--shadow);
 }
 
-#experience::-webkit-scrollbar {
+.experience::-webkit-scrollbar {
   width: 8px;
 }
 
-#experience::-webkit-scrollbar-track {
+.experience::-webkit-scrollbar-track {
   border-radius: 8px;
   background-color: transparent;
   border: 1px solid var(--shadow);
   box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
 }
 
-#experience::-webkit-scrollbar-thumb {
+.experience::-webkit-scrollbar-thumb {
   border-radius: 8px;
   background-color: var(--main);
   border: 2px solid var(--shadow);

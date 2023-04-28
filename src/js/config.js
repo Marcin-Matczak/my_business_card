@@ -6,7 +6,7 @@ export const select = {
   galleryBox: document.querySelector('.section-home__box--gallery'),
   certificatesBox: document.querySelector('.section-home__box--certificates'),
   certificatesSection: document.querySelector('.section-certificates'),
-  cvSection: document.querySelector('.main__cv'),
+  cvSection: document.querySelector('.section-cv'),
   cvBox: document.querySelector('.section-home__box--cv'),
   skillsSection: document.querySelector('.main__skills'),
   skillsBox: document.querySelector('.section-home__box--technologies'),

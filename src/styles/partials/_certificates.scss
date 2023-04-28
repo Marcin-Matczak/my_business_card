@@ -14,6 +14,23 @@
   padding: 0;
   margin: 0;
   overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    &::-webkit-scrollbar-track {
+      border-radius: 8px;
+      background-color: transparent;
+      border: 1px solid var(--shadow);
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      border-radius: 8px;
+      background-color: var(--main);
+      border: 2px solid var(--shadow);
+    }
 }
 
 .section-certificates__list__item {
@@ -64,6 +81,7 @@
   position: absolute;
   cursor: zoom-out;
 }
+
 
 @media (min-width: map-get($breakpoints, "xs")) {
   
