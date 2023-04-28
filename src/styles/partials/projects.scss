@@ -1,4 +1,4 @@
-.main__projects {
+.section-projects {
   @include center();
   width: 92%;
   height: 90%;
@@ -9,13 +9,13 @@
   color: var(--text);
 }
 
-.flex-wrapper {
+.projects-content {
   display: flex;
   height: 100%;
   width: 100%;
 }
 
-.heading {
+.projects-content__nav__title {
   font-size: 20px;
   text-transform: uppercase;
   font-weight: 600;
@@ -23,7 +23,7 @@
   text-decoration: underline;
 }
 
-.sidebar {
+.projects-content__nav {
   flex: 1 0 0;
   text-align: center;
 
@@ -32,7 +32,7 @@
   }
 }
 
-.projects-wrapper {
+.projects-content__main{
   flex: 5 0 0;
   margin: 0 10px 0 10px;
 
@@ -41,21 +41,21 @@
   }
 }
 
-.sidebar, .projects-wrapper {
+.projects-content__nav, .projects-content__main{
   background: var(--bg);
   padding: $base-size;
   border: 1px solid var(--shadow);
   border-radius: $radius;
 }
 
-.short-instruction {
+.projects-content__main__intro {
   display: none;
 
   &.active {
     display: block;
     @include center();
 
-    &.active h5 {
+    &.active .projects-content__main__intro__title {
       overflow: hidden; 
       border-right: 1px solid var(--text);
       white-space: nowrap; 
@@ -79,7 +79,7 @@
   50% { border-color: var(--text) }
 }
 
-.list {
+.projects-content__nav__list {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -89,7 +89,7 @@
   }
 }
 
-.list-horizontal {
+.tags-list--horizontal {
   li {
     display: inline-block;
   }
@@ -97,9 +97,10 @@
 
 a {
   text-decoration: none;
+  color: var(--text);
 }
 
-.authors {
+.projects-content__nav__list--authors {
   li {
     margin-bottom: 12px;
   }
@@ -145,11 +146,11 @@ a {
   transition: width 0.3s;
 }
 
-.project-title {
+.project__title {
   margin-bottom: $base-size;
 }
 
-.project-author {
+.project__author {
   font-style: italic;
 }
 
@@ -187,11 +188,11 @@ a {
     font-size: 14px;
   }
 
-  .sidebar {
+  .projects-content__nav {
     font-size: 14px;
   }
 
-  .heading {
+  .projects-content__nav__title {
     font-size: 16px;
   }
 
@@ -221,11 +222,11 @@ a {
     font-size: 12px;
   }
 
-  .sidebar {
+  .projects-content__nav {
     font-size: 12px;
   }
 
-  .heading {
+  .projects-content__nav__title {
     font-size: 14px;
   }
 
@@ -251,11 +252,11 @@ a {
 }
 
 @media (max-width: 767px){
-  .projects-wrapper {
+  .projects-content__main{
     margin: 4px 0 4px 0;
   }
 
-  .flex-wrapper {
+  .projects-content {
     flex-direction: column;
   }
 
@@ -267,28 +268,28 @@ a {
     }
   }
 
-  .sidebar {
+  .projects-content__nav {
     font-size: 12px;
   }
 
-  .heading {
+  .projects-content__nav__title {
     font-size: 14px;
     margin-top: 8px;
   }
 
-  .list li {
+  .projects-content__nav__list li {
     display: inline;
   }
   
-  .main__projects {
+  .section-projects {
     padding: 10px;
   }
 
-  .sidebar {
+  .projects-content__nav {
     flex: 1.6 0 0;
 
     &:first-of-type {
-      .heading {
+      .projects-content__nav__title {
         margin-top: 36px;
       }
     }
@@ -296,7 +297,7 @@ a {
 }
 
 @media (max-width: 575px){
-  .projects-wrapper {
+  .projects-content__main{
     margin: 4px 0 4px 0;
     position: relative;
     overflow-y: auto;
@@ -307,7 +308,7 @@ a {
     }
   }
 
-  .flex-wrapper {
+  .projects-content {
     flex-direction: column;
   }
 
@@ -338,15 +339,15 @@ a {
     border: 2px solid var(--shadow);
   }
 
-  .sidebar {
+  .projects-content__nav {
     font-size: 12px;
   }
 
-  .heading {
+  .projects-content__nav__title {
     font-size: 14px;
   }
 
-  .list {
+  .projects-content__nav__list {
     padding: 2px;
    
     li {
@@ -354,27 +355,27 @@ a {
     }
   }
   
-  .main__projects {
+  .section-projects {
     padding: 10px;
   }
 
-  .sidebar {
+  .projects-content__nav {
     flex: 1.8 0 0;
     padding: 3px;
 
-    .heading{
+    .projects-content__nav__title{
       margin: 0px;
     }
 
     &:first-of-type {
-      .heading {
+      .projects-content__nav__title {
         margin-top: 4px;
         padding: 2px;
       }
     }
   }
 
-  .project-title {
+  .project__title {
     margin: 0 0 4px 0;
   }
 }

@@ -10,7 +10,7 @@ export const select = {
   cvBox: document.querySelector('.section-home__box--cv'),
   skillsSection: document.querySelector('.section-technology'),
   skillsBox: document.querySelector('.section-home__box--technologies'),
-  projectsSection: document.querySelector('.main__projects'),
+  projectsSection: document.querySelector('.section-project'),
   projectsBox: document.querySelector('.section-home__box--projects'),
   photoChangingBox: document.querySelector('.gallery-box__image'),
 
@@ -69,12 +69,12 @@ export const templates = {
 
 export const opts = {
   articleSelector: '.project',
-  titleSelector: '.project-title',
-  titleListSelector: '.titles',
-  articleTagsSelector: '.project-tags .list',
-  articleAuthorSelector: '.project-author',
-  tagsListSelector: '.tags.list',
-  authorsListSelector: '.authors',
+  titleSelector: '.project__title',
+  titleListSelector: '.projects-content__nav__list--titles',
+  articleTagsSelector: '.project-tags .tags-list',
+  articleAuthorSelector: '.project__author',
+  tagsListSelector: '.projects-content__nav__list--tags.tags-list',
+  authorsListSelector: '.projects-content__nav__list--authors',
   cloudClassCount: 5,
   cloudClassPrefix: 'tag-size-',
 };

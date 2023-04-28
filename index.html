@@ -11,7 +11,7 @@
   <body>
     <main class="main">
       <button class="main__button hide"><i class="fa-solid fa-arrow-left"></i><span class="hide">back</span></button>
-      <section class="section-home ">
+      <section class="section-home hide">
         <div class="container">
           <div class="section-home__box section-home__box--intro">
             <div class="intro-box">
@@ -41,7 +41,7 @@
               </p>
               <p>
                 Well, that's it! I am still working to improve my website. I'm going to clean up my code and  follow DRY rule. Additionally BEM methodology, 
-                rewriting code in TypeScript and more is scheduled. Even though I haven't finished my "buisness card" yet, I've decided that it should see the light of a day right now.
+                rewriting code in TypeScript and more is scheduled. Even though I haven't finished my "business card" yet, I've decided that it should see the light of a day right now.
                 Thanks for being here. I hope you enjoy discovering this place.
               </p>                       
               <p><span>&#128075;</span>  Greetings!</p> 
@@ -432,20 +432,20 @@
           </tbody>
         </table>
       </section>
-      <section class="main__projects hide">
-        <div class="flex-wrapper">
-          <aside class="sidebar">
-          <h2 class="heading">Projects</h2>
-          <ul class="list titles">
+      <section class="section-projects">
+        <div class="projects-content">
+          <aside class="projects-content__nav">
+          <h2 class="projects-content__nav__title">Projects</h2>
+          <ul class="projects-content__nav__list projects-content__nav__list--titles">
           </ul>
           </aside>
-          <section class="projects-wrapper" id="projects-wrapper">
-          <div class="short-instruction active"><h5>Select a project from the list...</h5></div>  
+          <section class="projects-content__main">
+          <div class="projects-content__main__intro active"><h5 class="projects-content__main__intro__title">Select a project from the list...</h5></div>  
           <article class="project" id="project-1" data-tags="React Redux" data-author="developed by: Bootcamp">
-            <h3 class="project-title">To-Do</h3>
-            <img src="./src/images/projects/todo.png" alt="todo-img">
-            <p class="project-author"></p>
-            <div class="project-content">
+            <h3 class="project__title">To-Do</h3>
+            <img class="project__image" src="./src/images/projects/todo.png" alt="todo-img">
+            <p class="project__author"></p>
+            <div class="project__descr">
               <p>
                 To-do app for adding and editing targets . With ability to add separate groups. 
                 Included filtering and searching for a tasks. Moreover, additional subpages for add some notes. App was written in an older version of React. 
@@ -475,103 +475,103 @@
             </ul>
             <div class="project-tags">
               <p><strong>Tags:</strong></p>
-              <ul class="list list-horizontal">
+              <ul class="tags-list tags-list--horizontal">
               </ul>
             </div>
             <i class="fa-solid fa-link"></i>
             <a href="https://to-do-app-marcin.herokuapp.com/" target="_blank" class="link">Visit app <span class="link-border"></span></a>
           </article>
           <article class="project" id="project-2" data-tags="CSS HTML " data-author="developed by: Me">
-            <h3 class="project-title">Cruises</h3>
-            <img src="./src/images/projects/captain.png" alt="cruises-img">
-            <p class="project-author"></p>
-            <div class="project-content">
+            <h3 class="project__title">Cruises</h3>
+            <img class="project__image" src="./src/images/projects/captain.png" alt="cruises-img">
+            <p class="project__author"></p>
+            <div class="project__descr">
               <p>
                 Great website template for a shipowner or sea expedition organizer. Atmospheric design.
               </p>              
             </div>
             <div class="project-tags">
               <p><strong>Tags:</strong></p>
-              <ul class="list list-horizontal">
+              <ul class="tags-list tags-list--horizontal">
               </ul>
             </div>
             <i class="fa-solid fa-link"></i>
             <a href="https://marcin-matczak.github.io/simply_website/" target="_blank" class="link">Visit website <span class="link-border"></span></a>
           </article>
           <article class="project" id="project-3" data-tags="HTML CSS Sass" data-author="developed by: Me">
-            <h3 class="project-title">Retro Rental</h3>
-            <img src="./src/images/projects/retro.png" alt="retro-img">
-            <p class="project-author"></p>
-            <div class="project-content">
+            <h3 class="project__title">Retro Rental</h3>
+            <img class="project__image" src="./src/images/projects/retro.png" alt="retro-img">
+            <p class="project__author"></p>
+            <div class="project__descr">
               <p>
                 A good base to develop rental website of cassettes, vinyl records or other old equipment. Interesting design in retro style.
               </p>              
             </div>
             <div class="project-tags">
               <p><strong>Tags:</strong></p>
-              <ul class="list list-horizontal">
+              <ul class="tags-list tags-list--horizontal">
               </ul>
             </div>
             <i class="fa-solid fa-link"></i>
             <a href="https://marcin-matczak.github.io/another_simply_website/" target="_blank" class="link">Visit website <span class="link-border"></span></a>
           </article>
           <article class="project" id="project-4" data-tags="HTML Sass" data-author="developed by: Me">
-            <h3 class="project-title">Business Portal</h3>
-            <img src="./src/images/projects/profile.png" alt="profile-img">
-            <p class="project-author"></p>
-            <div class="project-content">
+            <h3 class="project__title">Business Portal</h3>
+            <img class="project__image" src="./src/images/projects/profile.png" alt="profile-img">
+            <p class="project__author"></p>
+            <div class="project__descr">
               <p>
                 Admin panel or business portal template to develop.
               </p>
-              <a href="https://marcin-matczak.github.io/Solo_Project/" target="_blank">Visit website</a>
+              <a href="https://marcin-matczak.github.io/Solo_Project/" target="_blank"></a>
             </div>
             <div class="project-tags">
               <p><strong>Tags:</strong></p>
-              <ul class="list list-horizontal">
+              <ul class="tags-list tags-list--horizontal">
               </ul>
             </div>
             <i class="fa-solid fa-link"></i>
             <a href="https://marcin-matczak.github.io/Solo_Project/" target="_blank" class="link">Visit website <span class="link-border"></span></a>
           </article>
           <article class="project" id="project-5" data-tags="JSON" data-author="developed by: Bootcamp">
-            <h3 class="project-title">Task Runner</h3>
-            <img src="./src/images/projects/task.png" alt="task-img">
-            <p class="project-author"></p>
-            <div class="project-content">
+            <h3 class="project__title">Task Runner</h3>
+            <img class="project__image" src="./src/images/projects/task.png" alt="task-img">
+            <p class="project__author"></p>
+            <div class="project__descr">
               <p>
                 Personalized task runner settings.
               </p>              
             </div>
             <div class="project-tags">
               <p><strong>Tags:</strong></p>
-              <ul class="list list-horizontal">
+              <ul class="tags-list tags-list--horizontal">
               </ul>
             </div>
             <i class="fa-solid fa-link"></i>
             <a href="https://github.com/Marcin-Matczak/task_runner" target="_blank" class="link">Check the code <span class="link-border"></span></a>
           </article>
           <article class="project" id="project-6" data-tags="HTML CSS" data-author="developed by: Me">
-            <h3 class="project-title">Curriculum Vitae</h3>
-            <img src="./src/images/projects/cv.png" alt="cv-img">
-            <p class="project-author"></p>
-            <div class="project-content">
+            <h3 class="project__title">Curriculum Vitae</h3>
+            <img class="project__image" src="./src/images/projects/cv.png" alt="cv-img">
+            <p class="project__author"></p>
+            <div class="project__descr">
               <p>
                 My simple curriculum vitae website.
               </p>             
             </div>
             <div class="project-tags">
               <p><strong>Tags:</strong></p>
-              <ul class="list list-horizontal">
+              <ul class="tags-list tags-list--horizontal">
               </ul>
             </div>
             <i class="fa-solid fa-link"></i>
             <a href="https://marcin-matczak.github.io/curriculum_vitae/" target="_blank" class="link">Visit website <span class="link-border"></span></a>
           </article>
           <article class="project" id="project-7" data-tags="HTML Sass Bootstrap" data-author="developed by: Me">
-            <h3 class="project-title">Skate Shop</h3>
-            <img src="./src/images/projects/skateboard.png" alt="skateboard-img">
-            <p class="project-author"></p>
-            <div class="project-content">
+            <h3 class="project__title">Skate Shop</h3>
+            <img class="project__image" src="./src/images/projects/skateboard.png" alt="skateboard-img">
+            <p class="project__author"></p>
+            <div class="project__descr">
               <p>
                 From my youthful passion for skateboarding, I created a base for skateshop and content about this kind of lifestyle. 
                 The code is based on the Bootstrap framework.
@@ -579,17 +579,17 @@
             </div>
             <div class="project-tags">
               <p><strong>Tags:</strong></p>
-              <ul class="list list-horizontal">
+              <ul class="tags-list tags-list--horizontal">
               </ul>
             </div>
             <i class="fa-solid fa-link"></i>
             <a href="https://marcin-matczak.github.io/skateshop_draft_bootstrap_5/" target="_blank" class="link">Visit website <span class="link-border"></span></a>
           </article>
           <article class="project" id="project-8" data-tags="JavaScript Sass Handlebars" data-author="developed by: Bootcamp">
-            <h3 class="project-title">Blog</h3>
-            <img src="./src/images/projects/blog.png" alt="blog-img">
-            <p class="project-author"></p>
-            <div class="project-content">
+            <h3 class="project__title">Blog</h3>
+            <img class="project__image" src="./src/images/projects/blog.png" alt="blog-img">
+            <p class="project__author"></p>
+            <div class="project__descr">
               <p>
                 A great base to develop blog site. Includes filtering options by articles or authors. In addition, a tag cloud is also implemented.
               </p> 
@@ -608,17 +608,17 @@
             </div>
             <div class="project-tags">
               <p><strong>Tags:</strong></p>
-              <ul class="list list-horizontal">
+              <ul class="tags-list tags-list--horizontal">
               </ul>
             </div>
             <i class="fa-solid fa-link"></i>
             <a href="https://marcin-matczak.github.io/project_blog/" target="_blank" class="link">Visit website <span class="link-border"></span></a>
           </article>
           <article class="project" id="project-9" data-tags="HTML Sass JavaScript" data-author="developed by: Bootcamp">
-            <h3 class="project-title">Game</h3>
-            <img src="./src/images/projects/game.png" alt="game-img">
-            <p class="project-author"></p>
-            <div class="project-content">
+            <h3 class="project__title">Game</h3>
+            <img class="project__image" src="./src/images/projects/game.png" alt="game-img">
+            <p class="project__author"></p>
+            <div class="project__descr">
               <p>
                 A popular and well-known "Rock paper scissors"game with retro graphics design from 80's.
               </p>              
@@ -646,17 +646,17 @@
             </div>
             <div class="project-tags">
               <p><strong>Tags:</strong></p>
-              <ul class="list list-horizontal">
+              <ul class="tags-list tags-list--horizontal">
               </ul>
             </div>
             <i class="fa-solid fa-link"></i>
             <a href="https://marcin-matczak.github.io/rock_paper_scissors_game/" target="_blank" class="link">Play the game <span class="link-border"></span></a>
           </article>
           <article class="project" id="project-10" data-tags="HTML Sass JavaScript Handlebars" data-author="developed by: Bootcamp">
-            <h3 class="project-title">Book App</h3>
-            <img src="./src/images/projects/book.png" alt="books-img">
-            <p class="project-author"></p>
-            <div class="project-content">
+            <h3 class="project__title">Book App</h3>
+            <img class="project__image" src="./src/images/projects/book.png" alt="books-img">
+            <p class="project__author"></p>
+            <div class="project__descr">
               <p>
                 A simple application with a list of books that can be implemented, for example, on bookstore website. 
                 Includes option to adding items to the list of "favorites", simple filtering and rating.
@@ -679,17 +679,17 @@
             </div>
             <div class="project-tags">
               <p><strong>Tags:</strong></p>
-              <ul class="list list-horizontal">
+              <ul class="tags-list tags-list--horizontal">
               </ul>
             </div>
             <i class="fa-solid fa-link"></i>
             <a href="https://github.com/Marcin-Matczak/books_app" target="_blank" class="link">Check application code <span class="link-border"></span></a>
           </article>
           <article class="project" id="project-11" data-tags="HTML Sass JavaScript Handlebars JSON AJAX" data-author="developed by: Bootcamp">
-            <h3 class="project-title">Pizzeria</h3>
-            <img src="./src/images/projects/pizza.png" alt="pizza-img">
-            <p class="project-author"></p>
-            <div class="project-content">
+            <h3 class="project__title">Pizzeria</h3>
+            <img class="project__image" src="./src/images/projects/pizza.png" alt="pizza-img">
+            <p class="project__author"></p>
+            <div class="project__descr">
               <p>
                 Website of a fictitious pizzeria with the ability to choosing pizza ingredients, 
                 placing orders, booking tables, adding products to the basket and checking the orders.
@@ -724,36 +724,36 @@
             </div>
             <div class="project-tags">
               <p><strong>Tags:</strong></p>
-              <ul class="list list-horizontal">
+              <ul class="tags-list tags-list--horizontal">
               </ul>
             </div>
             <i class="fa-solid fa-link"></i>
             <a href="https://pizza-app-project.herokuapp.com/" target="_blank" class="link">Visit website <span class="link-border"></span></a>
           </article>
           <article class="project" id="project-12" data-tags="TypeScript" data-author="developed by: Online course">
-            <h3 class="project-title">Notebook</h3>
-            <img src="./src/images/projects/list.png" alt="list-img">
-            <p class="project-author"></p>
-            <div class="project-content">
+            <h3 class="project__title">Notebook</h3>
+            <img class="project__image" src="./src/images/projects/list.png" alt="list-img">
+            <p class="project__author"></p>
+            <div class="project__descr">
               <p>
                 My first contact with TypeScript. Design of a simple to-do application based on an online tutorial.
               </p>              
             </div>
             <div class="project-tags">
               <p><strong>Tags:</strong></p>
-              <ul class="list list-horizontal">
+              <ul class="tags-list tags-list--horizontal">
               </ul>
             </div>
             <i class="fa-solid fa-link"></i>
             <a href="https://marcin-matczak.github.io/typesctipt_novice/" target="_blank" class="link">Add your task <span class="link-border"></span></a>
           </article>
           </section>
-          <aside class="sidebar">
-          <h2 class="heading">Tags</h2>
-          <ul class="list tags">
+          <aside class="projects-content__nav">
+          <h2 class="projects-content__nav__title">Tags</h2>
+          <ul class="tags-list projects-content__nav__list projects-content__nav__list--tags">
           </ul>
-          <h2 class="heading">Authors</h2>
-          <ul class="list authors">
+          <h2 class="projects-content__nav__title">Authors</h2>
+          <ul class="projects-content__nav__list projects-content__nav__list--authors">
           </ul>
         </aside>
         </div>

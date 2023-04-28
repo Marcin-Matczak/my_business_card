@@ -229,7 +229,9 @@ const setAnimation = function () {
   const titleClickHandler = function (event) {
     event.preventDefault();
     const clickedElement = this;
-    const activeLinks = document.querySelectorAll('.titles a.active');
+    const activeLinks = document.querySelectorAll(
+      '.projects-content__nav__list--titles a.active'
+    );
 
     for (let activeLink of activeLinks) {
       activeLink.classList.remove(classNames.active);
@@ -237,7 +239,7 @@ const setAnimation = function () {
 
     clickedElement.classList.add(classNames.active);
     const activeArticles = document.querySelectorAll(
-      '.projects-wrapper .active'
+      '.projects-content__main .active'
     );
 
     for (let activeArticle of activeArticles) {
@@ -265,7 +267,9 @@ const setAnimation = function () {
     }
 
     titleList.innerHTML = html;
-    const links = document.querySelectorAll('.titles a');
+    const links = document.querySelectorAll(
+      '.projects-content__nav__list--titles a'
+    );
 
     for (let link of links) {
       link.addEventListener('click', titleClickHandler);
