@@ -1,27 +1,25 @@
-.main__certificates {
-  @include center();
-  width: 92%;
-  height: 90%;
+.section-certificates {
+  @include center($position: relative);
+  width: 94%;
+  height: 92%;
   background-color: var(--primary);
   border-radius: $radius;
   border: 2px solid var(--shadow);
 }
 
-.certificates {
+.section-certificates__list {
   height: 100%;
-  width: 100%;
   @include flex(row, center, space-evenly);  
   flex-wrap: wrap;  
   padding: 0;
   margin: 0;
+  overflow-y: auto;
 }
 
-.certificate {
-  max-width: 320px;
+.section-certificates__list__item {
   list-style-type: none;
   transform: scale(1);
   transition: transform 0.3s;
-  flex: 30%;
   border: 4mm ridge #6b4b38;
   overflow: hidden;
   cursor: zoom-in;
@@ -53,36 +51,77 @@
     }
   }
 
-  img {
+  .section-certificates__list__img {
     height: 100%;
     width: 100%;   
-    margin-bottom: -4px;
+    object-fit: fill;
+
   }
 }
 
 .zoom {
-  scale: 2.7;
   z-index: 1;
   position: absolute;
-  align-items: center;
-  justify-content: center;
   cursor: zoom-out;
 }
 
-@media (max-width: 1200px ) {
-  .certificate {
+@media (min-width: map-get($breakpoints, "xs")) {
+  
+  .section-certificates__list__item {
+    height: 170px;
     margin: 10px;
-    max-width: 250px;
+  }
+
+  .zoom {
+    scale: 1.3;
   }
 }
 
-@media (max-width: 766px) {
+@media (min-width: map-get($breakpoints, "sm")) {
+
+
+  .section-certificates__list__item {
+    height: 220px;
+    margin: 10px;
+  }
+  
   .zoom {
-    scale: 1.4;
-    z-index: 1;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
+    scale: 1.6;
+  }
+
+}
+
+@media (min-width: map-get($breakpoints, "md")) {
+  .section-certificates__list__item {
+    height: 190px;
+  }
+
+   .zoom {
+    scale: 2.3;
+  }
+
+}
+
+@media (min-width: map-get($breakpoints, "lg")) {
+
+  .section-certificates__list__item {
+    height: 180px;
+  }
+
+  .zoom {
+    scale: 2.9;
+  }
+
+ 
+}
+
+@media (min-width: map-get($breakpoints, "xl")) {
+  .section-certificates__list__item {
+    height: 230px;
+  }
+
+  .zoom{
+    scale: 2.7;
   }
   
 }

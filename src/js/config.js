@@ -1,11 +1,11 @@
 export const select = {
   // Main page
   homeSection: document.querySelector('.section-home'),
-  gallerySection: document.querySelector('.hobbies-gallery'),
+  gallerySection: document.querySelector('.section-gallery'),
   backButton: document.querySelector('.main__button'),
   galleryBox: document.querySelector('.section-home__box--gallery'),
   certificatesBox: document.querySelector('.section-home__box--certificates'),
-  certificatesSection: document.querySelector('.main__certificates'),
+  certificatesSection: document.querySelector('.section-certificates'),
   cvSection: document.querySelector('.main__cv'),
   cvBox: document.querySelector('.section-home__box--cv'),
   skillsSection: document.querySelector('.main__skills'),
@@ -21,13 +21,13 @@ export const select = {
   infoMessage: document.querySelector('.form__fieldset__confirm-msg'),
 
   // Gallery
-  thumbnails: document.querySelectorAll('.hobbies-gallery__mosaic__img'),
-  galleryContainer: document.querySelector('.hobbies-gallery__mosaic'),
-  popupWrapper: document.querySelector('.hobbies-gallery__popup'),
-  popupWindow: document.querySelector('.hobbies-gallery__popup__img'),
-  nextPhotoButton: document.querySelector('.hobbies-gallery__popup__btn--next'),
+  thumbnails: document.querySelectorAll('.section-gallery__mosaic__img'),
+  galleryContainer: document.querySelector('.section-gallery__mosaic'),
+  popupWrapper: document.querySelector('.section-gallery__popup'),
+  popupWindow: document.querySelector('.section-gallery__popup__img'),
+  nextPhotoButton: document.querySelector('.section-gallery__popup__btn--next'),
   previousPhotoButton: document.querySelector(
-    '.hobbies-gallery__popup__btn--previous'
+    '.section-gallery__popup__btn--previous'
   ),
 
   // Clock
@@ -41,7 +41,7 @@ export const select = {
   profileImg: document.querySelector('.intro-box__image'),
 
   // Others
-  certificates: document.querySelectorAll('.certificate'),
+  certificates: document.querySelectorAll('.section-certificates__list__item'),
   techStackIcons: document.querySelectorAll('tbody img'),
   counter: document.getElementById('count'),
   root: document.querySelector(':root'),
