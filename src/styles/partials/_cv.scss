@@ -1,31 +1,31 @@
 .section-cv {
-  @include center();
-  width: 92%;
-  height: 90%;
   background-color: var(--primary);
-  border-radius: $radius;
   border: 2px solid var(--shadow);
+  border-radius: $radius;
+  height: 90%;
   overflow: hidden;
-}
+  width: 92%;
+  @include center();
 
-.section-cv__container {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  width: 100%;
-  height: 100%;
+  &__container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    position: relative;
+    width: 100%;
+  }
 }
 
 .about {
-  flex: 4;
-  color: var(--text);
   background-color: var(--primary);
+  color: var(--text);
+  flex: 4;
   overflow-y: auto;
 
   &__title {
     text-align: center;
-
-    em {
+    
+    i {
       margin-right: 15px;
     }
   }
@@ -36,9 +36,9 @@
 }
 
 .experience {
-  flex: 6;
-  color: var(--text);
   background-color: var(--bg);
+  color: var(--text);
+  flex: 6;
   overflow-y: auto;
   position: relative;
   padding: 20px 0 20px 0;
@@ -48,8 +48,8 @@
   }
 
   &__title {
-    text-decoration: underline;
     margin-bottom: 20px;
+    text-decoration: underline;
 
     i {
       margin-right: 15px;
@@ -66,13 +66,13 @@
 }
 
 .experience__paragraph--clause {
-  margin-top: 70px;
   font-size: 11px;
+  margin-top: 70px;
 }
 
 .experience__email:link { 
-  text-decoration: none; 
   color: var(--text);
+  text-decoration: none; 
 
   &:hover {
     color: lighten(black, 50%);

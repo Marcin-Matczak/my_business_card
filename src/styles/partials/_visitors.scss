@@ -1,28 +1,30 @@
-.section-home__box--visit-counter{
+.section-home__box--visit-counter {
   box-shadow: inset 0px 0px 30px -10px rgba(0, 0, 0, 1);
+  pointer-events: none;
+  
   &:hover {
     cursor: auto;
   }
 }
 
-.counter__value {
-  display: inline;
-  color: #cc0000;
-  font-size: 26px;
-}
-
 .counter {
   text-align: center;
-  
-  .counter__descr, .counter__sup {
-    font-size: 12px;
-    margin: 4px;
-    background: -webkit-linear-gradient(138deg, rgba(151,0,212,1) 18%, rgba(180,101,0,1) 85%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+
+  &__value {
+    color: #cc0000;
+    display: inline;
+    font-size: 26px;
   }
 
-  .counter__sup {
+  &__sup {
     display: inline;
+  }
+  
+  &__descr, &__sup {
+    background: -webkit-linear-gradient(138deg, rgba(151,0,212,1) 18%, rgba(180,101,0,1) 85%);
+    font-size: 12px;
+    margin: 4px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }

@@ -1,115 +1,121 @@
 .section-home__box--clock {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
-  position: relative;
   pointer-events: none;
+  position: relative;
 }
 
 .clock-outer {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
   height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
 
   &::after {
+    background: var(--text);
+    content: '';
+    left: 49%;
+    height: 100%;
+    position: absolute;
     transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
+    width: 3px;
     -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
   }
-}
 
-.clock-outer::after,
-.clock-outer::before,
-.clock-outer .clock-outer__marking{
-  content: '';
-  position: absolute;
-  width: 3px;
-  height: 100%;
-  background: var(--text);
-  left: 49%;
-}
+  &::before {
+    background: var(--text);
+    content: '';
+    height: 100%;
+    left: 49%;
+    position: absolute;
+    width: 3px;
+  }
 
-.clock-outer .clock-outer__marking {
-  background: var(--shadow);
-  width: 2px;
-}
+  &__marking {
+    background: var(--shadow);
+    content: '';
+    height: 100%;
+    left: 49%;
+    position: absolute;
+    width: 2px;
 
-.clock-outer .clock-outer__marking.clock-outer__marking--one {
-  -webkit-transform: rotate(30deg);
-  -moz-transform: rotate(30deg);
-  transform: rotate(30deg)
-}
+    &--one {
+      transform: rotate(30deg);
+      -moz-transform: rotate(30deg);
+      -webkit-transform: rotate(30deg);
+    }
 
-.clock-outer .clock-outer__marking.clock-outer__marking--two {
-  -webkit-transform: rotate(60deg);
-  -moz-transform: rotate(60deg);
-  transform: rotate(60deg)
-}
+    &--two {
+      transform: rotate(60deg);
+      -moz-transform: rotate(60deg);
+      -webkit-transform: rotate(60deg);
+    }
 
-.clock-outer .clock-outer__marking.clock-outer__marking--three {
-  -webkit-transform: rotate(120deg);
-  -moz-transform: rotate(120deg);
-  transform: rotate(120deg)
-}
+    &--three {
+      transform: rotate(120deg);
+      -moz-transform: rotate(120deg);
+      -webkit-transform: rotate(120deg);
+    }
 
-.clock-outer .clock-outer__marking.clock-outer__marking--four {
-  -webkit-transform: rotate(150deg);
-  -moz-transform: rotate(150deg);
-  transform: rotate(150deg)
+    &--four {
+      transform: rotate(150deg);
+      -moz-transform: rotate(150deg);
+      -webkit-transform: rotate(150deg);
+    }
+  }  
 }
 
 .clock-inner {
+  background: var(--primary);
+  border-radius: 100%;
+  height: 80%;
+  left: 10%;
   position: absolute;
   top: 10%;
-  left: 10%;
   width: 80%;
-  height: 80%;
-  background: var(--primary);
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  border-radius: 100%;
   z-index: 1;
-}
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
 
-.clock-inner::before {
-  content: '';
-  position: absolute;
-  top: 52%;
-  left: 55%;
-  width: 10px;
-  height: 10px;
-  border-radius: 18px;
-  margin-left: -9px;
-  margin-top: -6px;
-  background: var(--shadow);
-  z-index: 11;
-}
+  &::before {
+    background: var(--shadow);
+    border-radius: 18px;
+    content: '';
+    height: 10px;
+    left: 55%;
+    margin-left: -9px;
+    margin-top: -6px;
+    position: absolute;
+    top: 52%;
+    width: 10px;
+    z-index: 11;
+  }
 
-.clock-inner__hand {
-  width: 50%;
-  right: 50%;
-  height: 4px;
-  background: #cc0000;
-  position: absolute;
-  top: 50%;
-  border-radius: 6px;
-  transform-origin: 100%;
-  transform: rotate(90deg);
-  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
-}
+  &__hand {
+    background: #cc0000;
+    border-radius: 6px;
+    height: 4px;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform-origin: 100%;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 
-.clock-inner__hand.clock-inner__hand--hour {
-  width: 30%;
-  z-index: 3;
-}
+    &--hour {
+      width: 30%;
+      z-index: 3;
+    }
 
-.clock-inner__hand.clock-inner__hand--min {
-  height: 2px;
-  z-index: 10;
-  width: 45%;
-}
+    &--min {
+      height: 2px;
+      width: 45%;
+      z-index: 10;
+    }
 
-.clock-inner__hand.clock-inner__hand--second {
-  background: var(--text);
-  width: 48%;
-  height: 1px;
+    &--second {
+      background: var(--text);
+      height: 1px;
+      width: 48%;
+    }
+  }
 }
