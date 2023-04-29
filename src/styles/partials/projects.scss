@@ -36,7 +36,7 @@
   flex: 5 0 0;
   margin: 0 10px 0 10px;
 
-  img {
+  .project__image {
     width: 14%;
   }
 }
@@ -115,13 +115,13 @@ a {
   }
 }
 
-.link {
+.project__link {
   color: var(--text);
   margin-left: 4px;
   position: relative;
   bottom: 12px;
 
-  &:hover .link-border {
+  &:hover .project__link__underline {
     width: 100%;
   }
 
@@ -135,7 +135,7 @@ a {
   bottom: 12px;
 }
 
-.link-border {
+.project__link__underline {
   position: absolute;
   top: 100%;
   left: 0px;
@@ -302,7 +302,7 @@ a {
     position: relative;
     overflow-y: auto;
 
-    img {
+    .project__image {
       width: 30%;
       margin: 0;
     }
@@ -322,18 +322,18 @@ a {
     }
   }
 
-  #projects-wrapper::-webkit-scrollbar {
+  .projects-content__main::-webkit-scrollbar {
     width: 8px;
   }
   
-  #projects-wrapper::-webkit-scrollbar-track {
+  .projects-content__main::-webkit-scrollbar-track {
     border-radius: 8px;
     background-color: transparent;
     border: 1px solid var(--shadow);
     box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
   }
   
-  #projects-wrapper::-webkit-scrollbar-thumb {
+  .projects-content__main::-webkit-scrollbar-thumb {
     border-radius: 8px;
     background-color: var(--main);
     border: 2px solid var(--shadow);
@@ -364,7 +364,7 @@ a {
     padding: 3px;
 
     .projects-content__nav__title{
-      margin: 0px;
+      margin: 7px;
     }
 
     &:first-of-type {

@@ -11,8 +11,8 @@
   <body>
     <main class="main">
       <button class="main__button hide"><i class="fa-solid fa-arrow-left"></i><span class="hide">back</span></button>
-      <section class="section-home hide">
-        <div class="container">
+      <section class="section-home">
+        <div class="section-home__container">
           <div class="section-home__box section-home__box--intro">
             <div class="intro-box">
               <img class="intro-box__image" src="" alt="profile-img">
@@ -44,7 +44,7 @@
                 rewriting code in TypeScript and more is scheduled. Even though I haven't finished my "business card" yet, I've decided that it should see the light of a day right now.
                 Thanks for being here. I hope you enjoy discovering this place.
               </p>                       
-              <p><span>&#128075;</span>  Greetings!</p> 
+              <p><span class="intro-box__emoji">&#128075;</span>  Greetings!</p> 
               <br>        
             </div>
           </div>
@@ -200,22 +200,22 @@
       <section class="section-certificates hide">
         <ul class="section-certificates__list">
           <li class="section-certificates__list__item">
-            <img class="section-certificates__list__img" src="/certificate-coding.139955a2.png" alt="certificate-coding">
+            <img class="section-certificates__list__item__img" src="/certificate-coding.139955a2.png" alt="certificate-coding">
           </li>
           <li class="section-certificates__list__item">
-            <img class="section-certificates__list__img" src="/certificate-games.00b85e5d.png" alt="certificate-games">
+            <img class="section-certificates__list__item__img" src="/certificate-games.00b85e5d.png" alt="certificate-games">
           </li>
           <li class="section-certificates__list__item">
-            <img class="section-certificates__list__img" src="/certificate-kodilla.f7d37242.png" alt="certificate-kodilla">
+            <img class="section-certificates__list__item__img" src="/certificate-kodilla.f7d37242.png" alt="certificate-kodilla">
           </li>
           <li class="section-certificates__list__item">
-            <img class="section-certificates__list__img" src="/certificate-js.0e382da6.png" alt="certificate-js">
+            <img class="section-certificates__list__item__img" src="/certificate-js.0e382da6.png" alt="certificate-js">
           </li>
           <li class="section-certificates__list__item">
-            <img class="section-certificates__list__img" src="/certificate-rwd.dbd7059f.png" alt="certificate-rwd">
+            <img class="section-certificates__list__item__img" src="/certificate-rwd.dbd7059f.png" alt="certificate-rwd">
           </li>
           <li class="section-certificates__list__item">
-            <img class="section-certificates__list__img" src="/certificate-web-dev.b56f88e3.png" alt="certificate-web-dev">
+            <img class="section-certificates__list__item__img" src="/certificate-web-dev.b56f88e3.png" alt="certificate-web-dev">
           </li>         
         </ul>
       </section>
@@ -406,7 +406,7 @@
           </tbody>
         </table>
       </section>
-      <section class="section-projects">
+      <section class="section-projects hide">
         <div class="projects-content">
           <aside class="projects-content__nav">
           <h2 class="projects-content__nav__title">Projects</h2>
@@ -453,7 +453,7 @@
               </ul>
             </div>
             <i class="fa-solid fa-link"></i>
-            <a href="https://to-do-app-marcin.herokuapp.com/" target="_blank" class="link">Visit app <span class="link-border"></span></a>
+            <a class="project__link" href="https://to-do-app-marcin.herokuapp.com/" target="_blank">Visit app <span class="project__link__underline"></span></a>
           </article>
           <article class="project" id="project-2" data-tags="CSS HTML " data-author="developed by: Me">
             <h3 class="project__title">Cruises</h3>
@@ -470,7 +470,7 @@
               </ul>
             </div>
             <i class="fa-solid fa-link"></i>
-            <a href="https://marcin-matczak.github.io/simply_website/" target="_blank" class="link">Visit website <span class="link-border"></span></a>
+            <a class="project__link" href="https://marcin-matczak.github.io/simply_website/" target="_blank">Visit website <span class="project__link__underline"></span></a>
           </article>
           <article class="project" id="project-3" data-tags="HTML CSS Sass" data-author="developed by: Me">
             <h3 class="project__title">Retro Rental</h3>
@@ -487,7 +487,7 @@
               </ul>
             </div>
             <i class="fa-solid fa-link"></i>
-            <a href="https://marcin-matczak.github.io/another_simply_website/" target="_blank" class="link">Visit website <span class="link-border"></span></a>
+            <a class="project__link" href="https://marcin-matczak.github.io/another_simply_website/" target="_blank">Visit website <span class="project__link__underline"></span></a>
           </article>
           <article class="project" id="project-4" data-tags="HTML Sass" data-author="developed by: Me">
             <h3 class="project__title">Business Portal</h3>
@@ -505,7 +505,7 @@
               </ul>
             </div>
             <i class="fa-solid fa-link"></i>
-            <a href="https://marcin-matczak.github.io/Solo_Project/" target="_blank" class="link">Visit website <span class="link-border"></span></a>
+            <a class="project__link" href="https://marcin-matczak.github.io/Solo_Project/" target="_blank">Visit website <span class="project__link__underline"></span></a>
           </article>
           <article class="project" id="project-5" data-tags="JSON" data-author="developed by: Bootcamp">
             <h3 class="project__title">Task Runner</h3>
@@ -522,7 +522,7 @@
               </ul>
             </div>
             <i class="fa-solid fa-link"></i>
-            <a href="https://github.com/Marcin-Matczak/task_runner" target="_blank" class="link">Check the code <span class="link-border"></span></a>
+            <a class="project__link" href="https://github.com/Marcin-Matczak/task_runner" target="_blank">Check the code <span class="project__link__underline"></span></a>
           </article>
           <article class="project" id="project-6" data-tags="HTML CSS" data-author="developed by: Me">
             <h3 class="project__title">Curriculum Vitae</h3>
@@ -539,7 +539,7 @@
               </ul>
             </div>
             <i class="fa-solid fa-link"></i>
-            <a href="https://marcin-matczak.github.io/curriculum_vitae/" target="_blank" class="link">Visit website <span class="link-border"></span></a>
+            <a class="project__link" href="https://marcin-matczak.github.io/curriculum_vitae/" target="_blank">Visit website <span class="project__link__underline"></span></a>
           </article>
           <article class="project" id="project-7" data-tags="HTML Sass Bootstrap" data-author="developed by: Me">
             <h3 class="project__title">Skate Shop</h3>
@@ -557,7 +557,7 @@
               </ul>
             </div>
             <i class="fa-solid fa-link"></i>
-            <a href="https://marcin-matczak.github.io/skateshop_draft_bootstrap_5/" target="_blank" class="link">Visit website <span class="link-border"></span></a>
+            <a class="project__link" href="https://marcin-matczak.github.io/skateshop_draft_bootstrap_5/" target="_blank">Visit website <span class="project__link__underline"></span></a>
           </article>
           <article class="project" id="project-8" data-tags="JavaScript Sass Handlebars" data-author="developed by: Bootcamp">
             <h3 class="project__title">Blog</h3>
@@ -586,7 +586,7 @@
               </ul>
             </div>
             <i class="fa-solid fa-link"></i>
-            <a href="https://marcin-matczak.github.io/project_blog/" target="_blank" class="link">Visit website <span class="link-border"></span></a>
+            <a class="project__link" href="https://marcin-matczak.github.io/project_blog/" target="_blank">Visit website <span class="project__link__underline"></span></a>
           </article>
           <article class="project" id="project-9" data-tags="HTML Sass JavaScript" data-author="developed by: Bootcamp">
             <h3 class="project__title">Game</h3>
@@ -624,7 +624,7 @@
               </ul>
             </div>
             <i class="fa-solid fa-link"></i>
-            <a href="https://marcin-matczak.github.io/rock_paper_scissors_game/" target="_blank" class="link">Play the game <span class="link-border"></span></a>
+            <a class="project__link" href="https://marcin-matczak.github.io/rock_paper_scissors_game/" target="_blank">Play the game <span class="project__link__underline"></span></a>
           </article>
           <article class="project" id="project-10" data-tags="HTML Sass JavaScript Handlebars" data-author="developed by: Bootcamp">
             <h3 class="project__title">Book App</h3>
@@ -657,7 +657,7 @@
               </ul>
             </div>
             <i class="fa-solid fa-link"></i>
-            <a href="https://github.com/Marcin-Matczak/books_app" target="_blank" class="link">Check application code <span class="link-border"></span></a>
+            <a class="project__link" href="https://github.com/Marcin-Matczak/books_app" target="_blank">Check application code <span class="project__link__underline"></span></a>
           </article>
           <article class="project" id="project-11" data-tags="HTML Sass JavaScript Handlebars JSON AJAX" data-author="developed by: Bootcamp">
             <h3 class="project__title">Pizzeria</h3>
@@ -702,7 +702,7 @@
               </ul>
             </div>
             <i class="fa-solid fa-link"></i>
-            <a href="https://pizza-app-project.herokuapp.com/" target="_blank" class="link">Visit website <span class="link-border"></span></a>
+            <a class="project__link" href="https://pizza-app-project.herokuapp.com/" target="_blank">Visit website <span class="project__link__underline"></span></a>
           </article>
           <article class="project" id="project-12" data-tags="TypeScript" data-author="developed by: Online course">
             <h3 class="project__title">Notebook</h3>
@@ -719,7 +719,7 @@
               </ul>
             </div>
             <i class="fa-solid fa-link"></i>
-            <a href="https://marcin-matczak.github.io/typesctipt_novice/" target="_blank" class="link">Add your task <span class="link-border"></span></a>
+            <a class="project__link" href="https://marcin-matczak.github.io/typesctipt_novice/" target="_blank">Add your task <span class="project__link__underline"></span></a>
           </article>
           </section>
           <aside class="projects-content__nav">

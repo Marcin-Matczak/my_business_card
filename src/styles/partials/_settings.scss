@@ -3,7 +3,7 @@
 /* Variables */
 
 $font-header: 'Montserrat', sans-serif;
-$font-text: 'Merriweather', serif;
+$font-text: 'Poppins', sans-serif;
 
 $base-size: 12px;
 $font-size: 16px;
@@ -32,6 +32,8 @@ $radius: 8px;
   grid-template-rows: repeat($row-value, $px);
   gap: $gap;
 }
+
+/* Classes */
 
 .hide {
   display: none;
