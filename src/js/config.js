@@ -10,7 +10,7 @@ export const select = {
   cvBox: document.querySelector('.section-home__box--cv'),
   skillsSection: document.querySelector('.section-technology'),
   skillsBox: document.querySelector('.section-home__box--technologies'),
-  projectsSection: document.querySelector('.section-project'),
+  projectsSection: document.querySelector('.section-projects'),
   projectsBox: document.querySelector('.section-home__box--projects'),
   photoChangingBox: document.querySelector('.gallery-box__image'),
 
