@@ -7,6 +7,10 @@
   padding: 2 * $base-size;
   width: 92%;
   @include center();
+
+  @media (max-width: map-get($breakpoints, "md")){
+    padding: 10px;
+  }
 }
 
 .projects-content {
@@ -14,39 +18,10 @@
   height: 100%;
   width: 100%;
 
-  &__main {
-    background: var(--bg);
-    border: 1px solid var(--shadow);
-    border-radius: $radius;
-    flex: 5 0 0;
-    margin: 0 10px 0 10px;
-    padding: $base-size;
-
-    &__intro {
-      display: none;
-    
-      &.active {
-        display: block;
-        @include center();
-    
-        &.active .projects-content__main__intro__title {
-          overflow: hidden; 
-          border-right: 1px solid var(--text);
-          white-space: nowrap; 
-       
-          letter-spacing: 1.4px;
-          animation: 
-            typing 1.5s steps(30, end),
-            blink-caret 1s step-end infinite;  
-          }
-        }
-    }
-  }
-
   &__nav {
+    background: var(--bg);
     border: 1px solid var(--shadow);
     border-radius: $radius;
-    background: var(--bg);
     flex: 1 0 0;
     padding: $base-size;
     text-align: center;
@@ -72,6 +47,230 @@
         font-weight: bold;
       }
     }
+
+    &__list--tags {
+      & > * {
+        margin-bottom: 8px;
+      }
+    }
+    
+    &__list--authors {
+      & > * {
+        margin-bottom: 10px;
+      }
+    }
+
+    @media (max-width: map-get($breakpoints, "xl")){
+      font-size: 14px;
+
+      &__title {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: map-get($breakpoints, "md")){
+      font-size: 12px;
+      flex: 1.6 0 0;
+  
+      &:first-of-type {
+        .projects-content__nav__title {
+          margin-top: 36px;
+        }
+      }
+  
+      &__title {
+        font-size: 14px;
+        margin-top: 8px;
+      }
+  
+      &__list > * {
+        display: inline;
+      }
+    }
+
+    @media (max-width: map-get($breakpoints, "sm")){
+      font-size: 12px;
+      flex: 1.8 0 0;
+      padding: 3px;
+  
+      &:first-of-type {
+        .projects-content__nav__title {
+          margin-top: 4px;
+          padding: 2px;
+        }
+      }
+  
+      &__title {
+        font-size: 14px;
+        margin: 7px;
+      }
+    
+      &__list {
+        padding: 2px;
+       
+        & > * {
+          display: inline;
+        }
+      }
+    }
+  }
+
+  &__main {
+    background: var(--bg);
+    border: 1px solid var(--shadow);
+    border-radius: $radius;
+    flex: 5 0 0;
+    margin: 0 10px 0 10px;
+    padding: $base-size;
+
+    &__intro {
+      display: none;
+    
+      &.active {
+        display: block;
+        @include center();
+    
+        &.active .projects-content__main__intro__title {
+          animation: typing 1.5s steps(30, end), blink-caret 1s step-end infinite;  
+          border-right: 1px solid var(--text);
+          letter-spacing: 1.4px;
+          overflow: hidden; 
+          white-space: nowrap; 
+        }
+      }
+    }
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+      border: 1px solid var(--shadow);
+      border-radius: 8px;
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--main);
+      border: 2px solid var(--shadow);
+      border-radius: 8px;
+    }
+  }
+
+  &__links {
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  @media (max-width: map-get($breakpoints, "md")){
+    flex-direction: column;
+    height: 100%;
+
+    &__main {
+      margin: 4px 0 4px 0;
+      overflow-y: auto;
+      position: relative;
+    }
+  }
+}
+
+.project {
+  display: none;
+
+  &__title {
+    margin-bottom: $base-size;
+  }
+
+  &__image {
+    width: 14%;
+  }
+  
+  &__author {
+    font-style: italic;
+  }
+
+  &.active {
+    display: block;
+    @include center();
+  }
+
+  &__link-icon {
+    bottom: 12px;
+    position: relative;
+  }
+
+  &__link {
+    bottom: 12px;
+    color: var(--text);
+    margin-left: 4px;
+    position: relative;
+    color: var(--text);
+    text-decoration: none;
+
+    &__underline {
+      background: linear-gradient(90deg, transparent, var(--text));
+      height: 1px;
+      left: 0px;
+      position: absolute;
+      top: 100%;
+      transition: width 0.3s;
+      width: 0;
+    }
+  
+    &:hover .project__link__underline {
+      width: 100%;
+    }
+  
+    &:hover {
+      color: grey;
+    }
+  }
+
+  @media (max-width: map-get($breakpoints, "sm")){
+    font-size: 12px;
+    height: 100%;
+    margin: 20px 0 20px 0;
+    
+    &.active {
+      width: 85%;
+    }
+
+    &__title {
+      margin: 0 0 4px 0;
+    }
+
+    &__image {
+      margin: 0;
+      width: 20%;
+    }
+  }
+
+  @media (max-width: map-get($breakpoints, "md")){
+    font-size: 12px;
+    
+    &.active {
+      width: 85%;
+    }
+  }
+
+  @media (max-width: map-get($breakpoints, "xl")){
+    font-size: 14px;
+  }
+}
+
+.project-tags {
+  display: flex;
+  margin-bottom: 30px;
+
+  &:first-child {
+    margin: 15 10px 0 0;
+  }
+}
+
+.tags-list--horizontal {
+  & > * {
+    display: inline-block;
   }
 }
 
@@ -85,157 +284,32 @@
   50% { border-color: var(--text) }
 }
 
-.tags-list--horizontal {
-  li {
-    display: inline-block;
-  }
-}
-
-a {
-  text-decoration: none;
-  color: var(--text);
-}
-
-.projects-content__nav__list--tags {
-  li {
-    margin-bottom: 8px;
-  }
-}
-
-.projects-content__nav__list--authors {
-  li {
-    margin-bottom: 10px;
-  }
-}
-
-.project {
+.hide {
   display: none;
-
-  &__image {
-    width: 14%;
-  }
-
-  &.active {
-    display: block;
-    @include center();
-  }
 }
 
-.project__link {
-  color: var(--text);
-  margin-left: 4px;
-  position: relative;
-  bottom: 12px;
-
-  &:hover .project__link__underline {
-    width: 100%;
-  }
-
-  &:hover {
-    color: grey;
-  }
-}
-
-.project i {
-  position: relative;
-  bottom: 12px;
-}
-
-.project__link__underline {
-  position: absolute;
-  top: 100%;
-  left: 0px;
-  width: 0;
-  height: 1px;
-  background: var(--text);
-  background: linear-gradient(90deg, transparent, var(--text));
-  transition: width 0.3s;
-}
-
-.project__title {
-  margin-bottom: $base-size;
-}
-
-.project__author {
-  font-style: italic;
-}
-
-.project-tags {
-  display: flex;
-  margin-bottom: 30px;
-
-  p {
-    margin: 0 10px 0 0;
-  }
-}
-
-.tag-size-1 {
-  font-size: 12px;
-}
-
-.tag-size-2 {
-  font-size: 16px;
-}
-
-.tag-size-3 {
-  font-size: 16px;
-}
-
-.tag-size-4 {
-  font-size: 18px;
-}
-
-.tag-size-5 {
-  font-size: 20px;
-}
-
-@media (max-width: 1199px){
-  .project {
-    font-size: 14px;
-  }
-
-  .projects-content__nav {
-    font-size: 14px;
-  }
-
-  .projects-content__nav__title {
-    font-size: 16px;
-  }
-
+@media (min-width: map-get($breakpoints, "xs")){
   .tag-size-1 {
-    font-size: 11px;
+    font-size: 8px;
   }
   
   .tag-size-2 {
-    font-size: 15px;
+    font-size: 11px;
   }
   
   .tag-size-3 {
-    font-size: 15px;
+    font-size: 12px;
   }
   
   .tag-size-4 {
-    font-size: 17px;
+    font-size: 14px;
   }
   
   .tag-size-5 {
-    font-size: 19px;
+    font-size: 16px;
   }
 }
-
-@media (max-width: 991px){
-  .project {
-    font-size: 12px;
-  }
-
-  .projects-content__nav {
-    font-size: 12px;
-  }
-
-  .projects-content__nav__title {
-    font-size: 14px;
-  }
-
+@media (min-width: map-get($breakpoints, "sm")){
   .tag-size-1 {
     font-size: 9px;
   }
@@ -256,136 +330,66 @@ a {
     font-size: 17px;
   }
 }
-
-@media (max-width: 767px){
-  .projects-content__main{
-    margin: 4px 0 4px 0;
-  }
-
-  .projects-content {
-    flex-direction: column;
-  }
-
-  .project {
-    font-size: 12px;
-    
-    &.active {
-      width: 85%;
-    }
-  }
-
-  .projects-content__nav {
-    font-size: 12px;
-  }
-
-  .projects-content__nav__title {
-    font-size: 14px;
-    margin-top: 8px;
-  }
-
-  .projects-content__nav__list li {
-    display: inline;
+@media (min-width: map-get($breakpoints, "md")){
+  .tag-size-1 {
+    font-size: 10px;
   }
   
-  .section-projects {
-    padding: 10px;
+  .tag-size-2 {
+    font-size: 13px;
   }
-
-  .projects-content__nav {
-    flex: 1.6 0 0;
-
-    &:first-of-type {
-      .projects-content__nav__title {
-        margin-top: 36px;
-      }
-    }
+  
+  .tag-size-3 {
+    font-size: 13px;
+  }
+  
+  .tag-size-4 {
+    font-size: 15px;
+  }
+  
+  .tag-size-5 {
+    font-size: 17px;
   }
 }
-
-@media (max-width: 575px){
-  .projects-content__main{
-    margin: 4px 0 4px 0;
-    position: relative;
-    overflow-y: auto;
-
-    .project__image {
-      width: 30%;
-      margin: 0;
-    }
-  }
-
-  .projects-content {
-    flex-direction: column;
-  }
-
-  .project {
-    font-size: 12px;
-    height: 100%;
-    margin: 20px 0 20px 0;
-    
-    &.active {
-      width: 85%;
-    }
-  }
-
-  .projects-content__main::-webkit-scrollbar {
-    width: 8px;
+@media (min-width: map-get($breakpoints, "lg")){
+  .tag-size-1 {
+    font-size: 11px;
   }
   
-  .projects-content__main::-webkit-scrollbar-track {
-    border-radius: 8px;
-    background-color: transparent;
-    border: 1px solid var(--shadow);
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  .tag-size-2 {
+    font-size: 15px;
   }
   
-  .projects-content__main::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    background-color: var(--main);
-    border: 2px solid var(--shadow);
-  }
-
-  .projects-content__nav {
-    font-size: 12px;
-  }
-
-  .projects-content__nav__title {
-    font-size: 14px;
-  }
-
-  .projects-content__nav__list {
-    padding: 2px;
-   
-    li {
-      display: inline;
-    }
+  .tag-size-3 {
+    font-size: 15px;
   }
   
-  .section-projects {
-    padding: 10px;
+  .tag-size-4 {
+    font-size: 17px;
   }
-
-  .projects-content__nav {
-    flex: 1.8 0 0;
-    padding: 3px;
-
-    .projects-content__nav__title{
-      margin: 7px;
-    }
-
-    &:first-of-type {
-      .projects-content__nav__title {
-        margin-top: 4px;
-        padding: 2px;
-      }
-    }
-  }
-
-  .project__title {
-    margin: 0 0 4px 0;
+  
+  .tag-size-5 {
+    font-size: 19px;
   }
 }
+@media (min-width: map-get($breakpoints, "xl")){
+  .tag-size-1 {
+  font-size: 12px;
+}
 
-.hide {
-  display: none;
+.tag-size-2 {
+  font-size: 16px;
+}
+
+.tag-size-3 {
+  font-size: 16px;
+}
+
+.tag-size-4 {
+  font-size: 18px;
+}
+
+.tag-size-5 {
+  font-size: 20px;
+}
 }
