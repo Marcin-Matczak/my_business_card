@@ -120,6 +120,7 @@
 
 .copyright {
   position: absolute;
+  color: var(--text);
 
   @media (min-width: map-get($breakpoints, "xs")) {
     bottom: 2px;

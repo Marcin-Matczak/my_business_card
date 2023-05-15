@@ -1,9 +1,18 @@
 import { select, templates, opts, classNames } from './config.js';
 import { getCurrentTheme } from './theme.js';
+import { changeSlide } from './gallery.js';
+import { setDate } from './clock.js';
 
+// Theme switch functionality
 getCurrentTheme();
 
-/** Contact form handling */
+// Gallery
+changeSlide();
+
+// Clock
+setDate();
+
+// Contact form handling
 
 select.btnForm.addEventListener('click', event => {
   event.preventDefault();
@@ -12,7 +21,7 @@ select.btnForm.addEventListener('click', event => {
   setTimeout(select.formFunctionality.submit(), 3500);
 });
 
-/** Home buttons functionality */
+// Home buttons functionality
 
 const backOne = () => {
   if (select.popupWrapper.classList.contains(classNames.active)) {
@@ -70,75 +79,7 @@ select.backButton.addEventListener('click', event => {
   removeAnimation();
 });
 
-/** Gallery */
-
-let currentImgSrc;
-
-select.thumbnails.forEach((thumbnail, index) => {
-  thumbnail.addEventListener('click', event => {
-    select.popupWrapper.classList.add(classNames.active);
-    select.popupWindow.src = event.target.src;
-    currentImgSrc = index;
-  });
-});
-
-select.nextPhotoButton.addEventListener('click', () => {
-  currentImgSrc === select.thumbnails.length - 1
-    ? (currentImgSrc = 0)
-    : currentImgSrc++;
-  select.popupWindow.src = select.thumbnails[currentImgSrc].src;
-});
-
-select.previousPhotoButton.addEventListener('click', () => {
-  currentImgSrc === 0
-    ? (currentImgSrc = select.thumbnails.length - 1)
-    : currentImgSrc--;
-  select.popupWindow.src = select.thumbnails[currentImgSrc].src;
-});
-
-//** Gallery Home-Box */
-
-const photoSliderArray = [];
-
-let randomNumber = Math.floor(Math.random() * 12) + 1;
-
-select.thumbnails.forEach(thumbnail => {
-  const imgSrc = thumbnail.getAttribute('src');
-  photoSliderArray.push(imgSrc);
-});
-
-const changeSlide = function () {
-  randomNumber++;
-  if (randomNumber > 11) randomNumber = 0;
-  let randomIndexOfArray = photoSliderArray[randomNumber];
-  select.photoChangingBox.src = randomIndexOfArray;
-  setTimeout(changeSlide, 5000);
-};
-changeSlide();
-
-/** Clock */
-
-function setDate() {
-  const now = new Date();
-
-  const seconds = now.getSeconds();
-  const secondsDegrees = (seconds / 60) * 360 + 90;
-  select.secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
-
-  const mins = now.getMinutes();
-  const minsDegrees = (mins / 60) * 360 + (seconds / 60) * 6 + 90;
-  select.minsHand.style.transform = `rotate(${minsDegrees}deg)`;
-
-  const hour = now.getHours();
-  const hourDegrees = (hour / 12) * 360 + (mins / 60) * 30 + 90;
-  select.hourHand.style.transform = `rotate(${hourDegrees}deg)`;
-}
-
-setInterval(setDate, 1000);
-
-setDate();
-
-/** select.certificates */
+// Certificates
 
 const removeZoom = function () {
   select.certificates.forEach(certificate =>

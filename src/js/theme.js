@@ -1,6 +1,6 @@
-/** Theme switch functionality */
-
 import { select } from './config.js';
+
+// Theme switch functionality
 
 export const getCurrentTheme = function () {
   let theme = window.matchMedia('(prefere-color-scheme: light)').matches
