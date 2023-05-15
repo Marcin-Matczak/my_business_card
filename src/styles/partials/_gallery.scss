@@ -5,6 +5,7 @@
 
   &__mosaic {
     background-color: var(--shadow);
+    border-radius: $radius;
     padding: 0.5em;
     transform: translate(-50%, -50%);
     @include center($position: relative);
@@ -25,6 +26,7 @@
   }
 
   &__popup {
+    border-radius: $radius;
     height: 100%;
     padding: 1.5em;
     visibility: hidden;

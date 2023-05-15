@@ -1,45 +1,7 @@
 import { select, templates, opts, classNames } from './config.js';
+import { getCurrentTheme } from './theme.js';
 
-/** Theme switch functionality */
-
-function getCurrentTheme() {
-  let theme = window.matchMedia('(prefere-color-scheme: light)').matches
-    ? 'light'
-    : 'dark';
-  localStorage.getItem('marcin_theme')
-    ? (theme = localStorage.getItem('marcin_theme'))
-    : null;
-  return theme;
-}
-
-const lightIcons = function () {
-  select.switchThemeButton.src = './src/images/icons/moon.png';
-  select.gitImgBox.src = './src/images/icons/git-dark.png';
-  select.profileImg.src = './src/images/icons/profile.png';
-};
-
-const darkIcons = function () {
-  select.switchThemeButton.src = './src/images/icons/sun.png';
-  select.gitImgBox.src = './src/images/icons/github-light.png';
-  select.profileImg.src = './src/images/icons/profile-dark.png';
-};
-
-function loadTheme(theme) {
-  theme === 'light' ? lightIcons() : darkIcons();
-  select.root.setAttribute('theme-mode', `${theme}`);
-}
-
-select.switchThemeButton.addEventListener('click', event => {
-  event.preventDefault();
-  let theme = getCurrentTheme();
-  theme === 'dark' ? (theme = 'light') : (theme = 'dark');
-  localStorage.setItem('marcin_theme', `${theme}`);
-  loadTheme(theme);
-});
-
-window.addEventListener('DOMContentLoaded', () => {
-  loadTheme(getCurrentTheme());
-});
+getCurrentTheme();
 
 /** Contact form handling */
 
@@ -440,6 +402,8 @@ const setAnimation = function () {
 
 /** Visitors */
 
+// const counter = document.getElementById('count');
+
 // updateVisitCount();
 
 // function updateVisitCount() {
@@ -448,6 +412,6 @@ const setAnimation = function () {
 //   )
 //     .then(res => res.json())
 //     .then(res => {
-//       select.counter.innerHTML = res.value;
+//       counter.innerHTML = res.value;
 //     });
 // }

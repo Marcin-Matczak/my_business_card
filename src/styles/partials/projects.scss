@@ -1,3 +1,5 @@
+/* General */
+
 .section-projects {
   background-color: var(--primary);
   border: 2px solid var(--shadow);
@@ -175,6 +177,8 @@
   }
 }
 
+/* Single project */
+
 .project {
   display: none;
 
@@ -274,6 +278,9 @@
   }
 }
 
+
+/* Welcome text animation */
+
 @keyframes typing {
   from { width: 0 }
   to { width: 100% }
@@ -284,9 +291,8 @@
   50% { border-color: var(--text) }
 }
 
-.hide {
-  display: none;
-}
+
+/* Tags size */
 
 @media (min-width: map-get($breakpoints, "xs")){
   .tag-size-1 {
