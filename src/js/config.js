@@ -1,6 +1,7 @@
 export const select = {
   // Main page
   homeSection: document.querySelector('.section-home'),
+  homeContainer: document.querySelector('.section-home__container'),
   gallerySection: document.querySelector('.section-gallery'),
   backButton: document.querySelector('.main__button'),
   galleryBox: document.querySelector('.section-home__box--gallery'),
@@ -8,7 +9,7 @@ export const select = {
   certificatesSection: document.querySelector('.section-certificates'),
   cvSection: document.querySelector('.section-cv'),
   cvBox: document.querySelector('.section-home__box--cv'),
-  skillsSection: document.querySelector('.section-technology'),
+  skillsSection: document.querySelector('.section-technologies'),
   skillsBox: document.querySelector('.section-home__box--technologies'),
   projectsSection: document.querySelector('.section-projects'),
   projectsBox: document.querySelector('.section-home__box--projects'),

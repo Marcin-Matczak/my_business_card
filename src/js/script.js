@@ -2,6 +2,7 @@ import { select, templates, opts, classNames } from './config.js';
 import { getCurrentTheme } from './theme.js';
 import { changeSlide } from './gallery.js';
 import { setDate } from './clock.js';
+import { goBackOne } from './manageHide.js';
 
 // Theme switch functionality
 getCurrentTheme();
@@ -12,6 +13,9 @@ changeSlide();
 // Clock
 setDate();
 
+// Back Button
+goBackOne();
+
 // Contact form handling
 
 select.btnForm.addEventListener('click', event => {
@@ -19,64 +23,6 @@ select.btnForm.addEventListener('click', event => {
   select.contactContent.classList.add(classNames.hide);
   select.infoMessage.classList.remove(classNames.hide);
   setTimeout(select.formFunctionality.submit(), 3500);
-});
-
-// Home buttons functionality
-
-const backOne = () => {
-  if (select.popupWrapper.classList.contains(classNames.active)) {
-    select.popupWrapper.classList.remove(classNames.active);
-  } else {
-    select.homeSection.classList.remove(classNames.hide);
-    select.backButton.classList.add(classNames.hide);
-    select.gallerySection.classList.add(classNames.hide);
-    select.certificatesSection.classList.add(classNames.hide);
-    select.cvSection.classList.add(classNames.hide);
-    select.skillsSection.classList.add(classNames.hide);
-    select.projectsSection.classList.add(classNames.hide);
-  }
-};
-
-select.galleryBox.addEventListener('click', event => {
-  event.preventDefault();
-  select.homeSection.classList.add(classNames.hide);
-  select.backButton.classList.remove(classNames.hide);
-  select.gallerySection.classList.remove(classNames.hide);
-});
-
-select.certificatesBox.addEventListener('click', event => {
-  event.preventDefault();
-  select.homeSection.classList.add(classNames.hide);
-  select.backButton.classList.remove(classNames.hide);
-  select.certificatesSection.classList.remove(classNames.hide);
-});
-
-select.cvBox.addEventListener('click', event => {
-  event.preventDefault();
-  select.homeSection.classList.add(classNames.hide);
-  select.backButton.classList.remove(classNames.hide);
-  select.cvSection.classList.remove(classNames.hide);
-});
-
-select.skillsBox.addEventListener('click', event => {
-  event.preventDefault();
-  select.homeSection.classList.add(classNames.hide);
-  select.backButton.classList.remove(classNames.hide);
-  select.skillsSection.classList.remove(classNames.hide);
-  setAnimation();
-});
-
-select.projectsBox.addEventListener('click', event => {
-  event.preventDefault();
-  select.homeSection.classList.add(classNames.hide);
-  select.backButton.classList.remove(classNames.hide);
-  select.projectsSection.classList.remove(classNames.hide);
-});
-
-select.backButton.addEventListener('click', event => {
-  event.preventDefault();
-  backOne();
-  removeAnimation();
 });
 
 // Certificates
@@ -102,27 +48,6 @@ const clickHandler = function (event) {
 for (let certificate of select.certificates) {
   certificate.addEventListener('click', clickHandler);
 }
-
-/** Skills */
-
-function animation() {
-  let delay = 0;
-
-  for (let i = 0; i < select.techStackIcons.length; i++) {
-    setTimeout(() => select.techStackIcons[i].classList.add('move'), delay);
-    delay = delay + 200;
-  }
-}
-
-const removeAnimation = function () {
-  select.techStackIcons.forEach(icon => icon.classList.remove('move'));
-};
-
-const setAnimation = function () {
-  setTimeout(() => {
-    animation();
-  }, 300);
-};
 
 /** Projects */
 
