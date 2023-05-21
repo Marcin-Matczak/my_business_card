@@ -1,19 +1,21 @@
 export const select = {
   // Main page
-  homeSection: document.querySelector('.section-home'),
   homeContainer: document.querySelector('.section-home__container'),
-  gallerySection: document.querySelector('.section-gallery'),
   backButton: document.querySelector('.main__button'),
   galleryBox: document.querySelector('.section-home__box--gallery'),
   certificatesBox: document.querySelector('.section-home__box--certificates'),
-  certificatesSection: document.querySelector('.section-certificates'),
-  cvSection: document.querySelector('.section-cv'),
   cvBox: document.querySelector('.section-home__box--cv'),
-  skillsSection: document.querySelector('.section-technologies'),
   skillsBox: document.querySelector('.section-home__box--technologies'),
-  projectsSection: document.querySelector('.section-projects'),
   projectsBox: document.querySelector('.section-home__box--projects'),
   photoChangingBox: document.querySelector('.gallery-box__image'),
+
+  // Sections
+  homeSection: document.querySelector('.section-home'),
+  gallerySection: document.querySelector('.section-gallery'),
+  certificatesSection: document.querySelector('.section-certificates'),
+  cvSection: document.querySelector('.section-cv'),
+  skillsSection: document.querySelector('.section-technologies'),
+  projectsSection: document.querySelector('.section-projects'),
 
   // Contact form
   contactContent: document.querySelector('.form__fieldset__elements'),
@@ -41,8 +43,11 @@ export const select = {
   gitImgBox: document.querySelector('.link-btn__icon'),
   profileImg: document.querySelector('.intro-box__image'),
 
-  // Others
+  // Certificates
+  certificatesList: document.querySelector('.section-certificates__list'),
   certificates: document.querySelectorAll('.section-certificates__list__item'),
+
+  // Others
   techStackIcons: document.querySelectorAll('tbody img'),
   counter: document.getElementById('count'),
   root: document.querySelector(':root'),

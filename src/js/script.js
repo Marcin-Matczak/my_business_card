@@ -3,6 +3,7 @@ import { getCurrentTheme } from './theme.js';
 import { changeSlide } from './gallery.js';
 import { setDate } from './clock.js';
 import { goBackOne } from './manageHide.js';
+import { zoomCertificate } from './certificates.js';
 
 // Theme switch functionality
 getCurrentTheme();
@@ -16,6 +17,9 @@ setDate();
 // Back Button
 goBackOne();
 
+// Zoom certificate
+zoomCertificate();
+
 // Contact form handling
 
 select.btnForm.addEventListener('click', event => {
@@ -24,30 +28,6 @@ select.btnForm.addEventListener('click', event => {
   select.infoMessage.classList.remove(classNames.hide);
   setTimeout(select.formFunctionality.submit(), 3500);
 });
-
-// Certificates
-
-const removeZoom = function () {
-  select.certificates.forEach(certificate =>
-    certificate.classList.remove('zoom')
-  );
-};
-
-const clickHandler = function (event) {
-  event.preventDefault();
-  const clickedElement = this;
-
-  if (clickedElement.classList.contains('zoom')) {
-    removeZoom();
-  } else {
-    removeZoom();
-    clickedElement.classList.add('zoom');
-  }
-};
-
-for (let certificate of select.certificates) {
-  certificate.addEventListener('click', clickHandler);
-}
 
 /** Projects */
 
