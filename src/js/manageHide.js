@@ -3,11 +3,6 @@ import { setAnimation, removeAnimation } from './skills.js';
 
 // Content display management
 
-select.homeContainer.addEventListener('click', function (e) {
-  e.preventDefault();
-  hideClassChanger(e.target);
-});
-
 const hideClassChanger = function (target) {
   select.homeSection.classList.add(classNames.hide);
   select.backButton.classList.remove(classNames.hide);
@@ -25,7 +20,20 @@ const hideClassChanger = function (target) {
   if (suitableSection === select.skillsSection) setAnimation();
 };
 
-export const goBackOne = () => {
+select.homeContainer.addEventListener('click', function (e) {
+  e.preventDefault();
+  const clickedElement = e.target.closest('.section-home__box');
+  if (
+    clickedElement === null ||
+    !e.target
+      .closest('.section-home__box')
+      .classList.contains('section-home__box__clickable')
+  )
+    return;
+  hideClassChanger(e.target);
+});
+
+const goBackOne = () => {
   if (select.popupWrapper.classList.contains(classNames.active)) {
     select.popupWrapper.classList.remove(classNames.active);
   } else {

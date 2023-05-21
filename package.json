@@ -15,6 +15,8 @@
     "parcel-plugin-handlebars-precompile": "^1.0.2"
   },
   "dependencies": {
+    "certificates": "^1.2.0",
+    "contact": "^0.3.2",
     "countapi-js": "^1.0.2",
     "img": "^3.0.3",
     "sass": "^1.62.0"
