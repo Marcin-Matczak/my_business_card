@@ -1,5 +1,5 @@
 import { select, classNames } from './config.js';
-import { setAnimation, removeAnimation } from './skills.js';
+import { setAnimation, removeAnimation } from './sections/skills.js';
 
 // Hide class management
 

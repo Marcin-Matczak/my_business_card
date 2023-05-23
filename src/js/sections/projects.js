@@ -1,4 +1,4 @@
-import { templates, opts, classNames } from './config.js';
+import { templates, opts, classNames } from '../config.js';
 
 // Projects
 

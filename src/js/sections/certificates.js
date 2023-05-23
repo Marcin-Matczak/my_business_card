@@ -1,4 +1,4 @@
-import { select } from './config.js';
+import { select } from '../config.js';
 
 // Certificates
 

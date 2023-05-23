@@ -1,4 +1,4 @@
-import { select, classNames } from './config.js';
+import { select, classNames } from '../config.js';
 
 // Gallery
 
