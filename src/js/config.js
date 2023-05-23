@@ -49,6 +49,8 @@ export const select = {
 
   // Others
   techStackIcons: document.querySelectorAll('tbody img'),
+  githubIcon: document.querySelector('.section-home__box--github '),
+  linkedinIcon: document.querySelector('.section-home__box--linkedin '),
   counter: document.getElementById('count'),
   root: document.querySelector(':root'),
 };

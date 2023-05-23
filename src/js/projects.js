@@ -1,6 +1,6 @@
 import { templates, opts, classNames } from './config.js';
 
-/** Projects */
+// Projects
 
 const titleClickHandler = function (event) {
   event.preventDefault();

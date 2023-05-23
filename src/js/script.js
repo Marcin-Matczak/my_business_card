@@ -5,6 +5,7 @@ import {} from './manageHide.js';
 import {} from './certificates.js';
 import {} from './contact.js';
 import {} from './projects.js';
+import {} from './visitors.js';
 
 const init = function () {
   // Theme switch functionality
@@ -16,19 +17,3 @@ const init = function () {
 };
 
 init();
-
-/** Visitors */
-
-// const counter = document.getElementById('count');
-
-// updateVisitCount();
-
-// function updateVisitCount() {
-//   fetch(
-//     'https://api.countapi.xyz/update/marcinm/6d7979ca-ab60-4ef7-bd3e-1e2e790d4b13/?amount=1'
-//   )
-//     .then(res => res.json())
-//     .then(res => {
-//       counter.innerHTML = res.value;
-//     });
-// }

@@ -1,7 +1,7 @@
 import { select, classNames } from './config.js';
 import { setAnimation, removeAnimation } from './skills.js';
 
-// Content display management
+// Hide class management
 
 const hideClassChanger = function (target) {
   select.homeSection.classList.add(classNames.hide);
@@ -33,6 +33,8 @@ select.homeContainer.addEventListener('click', function (e) {
   hideClassChanger(e.target);
 });
 
+// Back button functionality
+
 const goBackOne = () => {
   if (select.popupWrapper.classList.contains(classNames.active)) {
     select.popupWrapper.classList.remove(classNames.active);
@@ -56,3 +58,17 @@ select.backButton.addEventListener('click', event => {
   goBackOne();
   removeAnimation();
 });
+
+// Links handling
+
+const linksHandling = function () {
+  const githubLink = function () {
+    window.open('https://github.com/Marcin-Matczak');
+  };
+  const linkedInLink = function () {
+    window.open('https://www.linkedin.com/in/marcin-matczak-3198a925a/');
+  };
+  select.githubIcon.addEventListener('click', githubLink);
+  select.linkedinIcon.addEventListener('click', linkedInLink);
+};
+linksHandling();

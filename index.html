@@ -117,7 +117,7 @@
             </form>
           </div>
           <button class="section-home__box section-home__box--github section-home__box--round">
-            <a href="https://github.com/Marcin-Matczak" target="_blank" class="link-btn link-btn--rotation-y">
+            <a class="link-btn link-btn--rotation-y">
               <img class="link-btn__icon" src="" alt="github-img"/>
               <div class="link-btn__description">
                 <p>Check my GitHub</p>
@@ -125,7 +125,7 @@
             </a>            
           </button>
           <button class="section-home__box section-home__box--linkedin">
-            <a href="https://www.linkedin.com/in/marcin-matczak-3198a925a/" target="_blank" class="link-btn link-btn--rotation-x">
+            <a class="link-btn link-btn--rotation-x">
               <img src="./src/images/icons/linkedin.png" alt="linkedin-img" class="link-btn__icon" />
               <div class="link-btn__description">
                 <p>Visit my LinkedIn</p>
@@ -172,7 +172,7 @@
           <div class="section-home__box section-home__box--visit-counter">
             <div class="counter">
               <p class="counter__descr">You are the</p>
-              <h3 class="counter__value" id="count"></h3>
+              <h3 class="counter__value" id="visits"></h3>
               <sup class="counter__sup"> th</sup>
               <p class="counter__descr">person on my website. Thank you!</p>
           </div>
@@ -498,7 +498,7 @@
               <i class="fa-solid fa-link project__link-icon"></i>
               <a class="project__link"href="https://marcin-matczak.github.io/simply_website/" target="_blank">Visit website <span class="project__link__underline"></span></a>
               </article>
-            <article class="project" id="project-3" data-tags="HTML CSS Sass" data-author="developed by: Me">
+            <article class="project" id="project-3" data-tags="HTML CSS SCSS" data-author="developed by: Me">
               <h3 class="project__title">Retro Rental</h3>
               <img class="project__image" src="./src/images/projects/retro.png" alt="retro-img">
               <p class="project__author"></p>
@@ -515,15 +515,17 @@
               <i class="fa-solid fa-link project__link-icon"></i>
               <a class="project__link" href="https://marcin-matczak.github.io/another_simply_website/" target="_blank">Visit website <span class="project__link__underline"></span></a>
             </article>
-            <article class="project" id="project-4" data-tags="HTML Sass" data-author="developed by: Me">
-              <h3 class="project__title">Business Portal</h3>
-              <img class="project__image" src="./src/images/projects/profile.png" alt="profile-img">
+            <article class="project" id="project-4" data-tags="JavaScript HTML SCSS" data-author="developed by: Me">
+              <h3 class="project__title">Home Budget</h3>
+              <img class="project__image" src="./src/images/projects/dollar.png" alt="cash-img">
               <p class="project__author"></p>
               <div class="project__descr">
                 <p>
-                  Admin panel or business portal template to develop.
+                  An application where the user can create his own account and monitor home budget. 
+                  The data are saved in the browser's local storage so after refreshing the page whole transactions are saved. 
+                  In addition, you can create accounts for all family members and exchange founds. Withdrwals and deposits are described by colors and icons.
+                  Moreover I tried to use the MVC architecture.
                 </p>
-                <a href="https://marcin-matczak.github.io/Solo_Project/" target="_blank"></a>
               </div>
               <div class="project-tags">
                 <p><strong>Tags:</strong></p>
@@ -531,7 +533,7 @@
                 </ul>
               </div>
               <i class="fa-solid fa-link project__link-icon"></i>
-              <a class="project__link" href="https://marcin-matczak.github.io/Solo_Project/" target="_blank">Visit website <span class="project__link__underline"></span></a>
+              <a class="project__link" href="https://home-finance-app.netlify.app/" target="_blank">Visit website <span class="project__link__underline"></span></a>
             </article>
             <article class="project" id="project-5" data-tags="JSON" data-author="developed by: Bootcamp">
               <h3 class="project__title">Task Runner</h3>
@@ -567,7 +569,7 @@
               <i class="fa-solid fa-link project__link-icon"></i>
               <a class="project__link" href="https://marcin-matczak.github.io/curriculum_vitae/" target="_blank">Visit website <span class="project__link__underline"></span></a>
             </article>
-            <article class="project" id="project-7" data-tags="HTML Sass Bootstrap" data-author="developed by: Me">
+            <article class="project" id="project-7" data-tags="HTML SCSS Bootstrap" data-author="developed by: Me">
               <h3 class="project__title">Skate Shop</h3>
               <img class="project__image" src="./src/images/projects/skateboard.png" alt="skateboard-img">
               <p class="project__author"></p>
@@ -585,7 +587,7 @@
               <i class="fa-solid fa-link project__link-icon"></i>
               <a class="project__link" href="https://marcin-matczak.github.io/skateshop_draft_bootstrap_5/" target="_blank">Visit website <span class="project__link__underline"></span></a>
             </article>
-            <article class="project" id="project-8" data-tags="JavaScript Sass Handlebars" data-author="developed by: Bootcamp">
+            <article class="project" id="project-8" data-tags="JavaScript SCSS Handlebars" data-author="developed by: Bootcamp">
               <h3 class="project__title">Blog</h3>
               <img class="project__image" src="./src/images/projects/blog.png" alt="blog-img">
               <p class="project__author"></p>
@@ -614,8 +616,8 @@
               <i class="fa-solid fa-link project__link-icon"></i>
               <a class="project__link" href="https://marcin-matczak.github.io/project_blog/" target="_blank">Visit website <span class="project__link__underline"></span></a>
             </article>
-            <article class="project" id="project-9" data-tags="HTML Sass JavaScript" data-author="developed by: Me">
-              <h3 class="project__title">Game</h3>
+            <article class="project" id="project-9" data-tags="HTML SCSS JavaScript" data-author="developed by: Me">
+              <h3 class="project__title">Rock Paper Scissors</h3>
               <img class="project__image" src="./src/images/projects/game.png" alt="game-img">
               <p class="project__author"></p>
               <div class="project__descr">
@@ -631,30 +633,15 @@
               <i class="fa-solid fa-link project__link-icon"></i>
               <a class="project__link" href="https://marcin-matczak.github.io/rock_paper_scissors_game/" target="_blank">Play the game <span class="project__link__underline"></span></a>
             </article>
-            <article class="project" id="project-10" data-tags="HTML Sass JavaScript Handlebars" data-author="developed by: Bootcamp">
-              <h3 class="project__title">Book App</h3>
-              <img class="project__image" src="./src/images/projects/book.png" alt="books-img">
+            <article class="project" id="project-10" data-tags="JavaScript HTML SCSS" data-author="developed by: Me">
+              <h3 class="project__title">Taboo Game</h3>
+              <img class="project__image" src="./src/images/projects/card-games.png" alt="cards-img">
               <p class="project__author"></p>
               <div class="project__descr">
                 <p>
-                  A simple application with a list of books that can be implemented, for example, on bookstore website. 
-                  Includes option to adding items to the list of "favorites", simple filtering and rating.
+                  Taboo game prepared for a friend who uses it to teach English his students. Substantive content of taboo cards like answers and taboo words by an English teacher. <br><br>
+                  How to play: guess the main password without using words from the list.
                 </p>
-                <h5>My part in this project:</h5>
-                <ul>
-                  <li>
-                    rendered HTML representation by Handlebars
-                  </li>
-                  <li>
-                    adding books to favourites
-                  </li>
-                  <li>
-                    implemened event delegation
-                  </li>
-                  <li>
-                    a part of the functionality of filtering books using a form
-                  </li>
-                </ul>
               </div>
               <div class="project-tags">
                 <p><strong>Tags:</strong></p>
@@ -662,9 +649,9 @@
                 </ul>
               </div>
               <i class="fa-solid fa-link project__link-icon"></i>
-              <a class="project__link" href="https://github.com/Marcin-Matczak/books_app" target="_blank">Check application code <span class="project__link__underline"></span></a>
+              <a class="project__link" href="https://sikorski-taboo.netlify.app/" target="_blank">Play the game <span class="project__link__underline"></span></a>
             </article>
-            <article class="project" id="project-11" data-tags="HTML Sass JavaScript Handlebars JSON AJAX" data-author="developed by: Bootcamp">
+            <article class="project" id="project-11" data-tags="HTML SCSS JavaScript Handlebars JSON AJAX" data-author="developed by: Bootcamp">
               <h3 class="project__title">Pizzeria</h3>
               <img class="project__image" src="./src/images/projects/pizza.png" alt="pizza-img">
               <p class="project__author"></p>
