@@ -34,7 +34,7 @@
     @include center();
     
     &__img {
-      border: 0.5em solid black;
+      border: 0.5em solid var(--shadow);
       border-radius: calc($radius / 1.5);
       height: 100%;
       object-fit: cover;
