@@ -1,4 +1,10 @@
 import { select } from '../config.js';
+import sun from '../../images/icons/sun.png';
+import moon from '../../images/icons/moon.png';
+import profileDark from '../../images/icons/profile-dark.png';
+import profileLight from '../../images/icons/profile.png';
+import githubDark from '../../images/icons/git-dark.png';
+import githubLight from '../../images/icons/github-light.png';
 
 // Theme switch functionality
 
@@ -13,33 +19,15 @@ export const getCurrentTheme = function () {
 };
 
 const lightIcons = function () {
-  select.switchThemeButton.firstElementChild.src = new URL(
-    '../images/icons/moon.png',
-    import.meta.url
-  );
-  select.gitImgBox.src = new URL(
-    '../images/icons/git-dark.png',
-    import.meta.url
-  );
-  select.profileImg.src = new URL(
-    '../images/icons/profile.png',
-    import.meta.url
-  );
+  select.switchThemeButton.firstElementChild.src = moon;
+  select.gitImgBox.src = githubDark;
+  select.profileImg.src = profileLight;
 };
 
 const darkIcons = function () {
-  select.switchThemeButton.firstElementChild.src = new URL(
-    '../images/icons/sun.png',
-    import.meta.url
-  );
-  select.gitImgBox.src = new URL(
-    '../images/icons/github-light.png',
-    import.meta.url
-  );
-  select.profileImg.src = new URL(
-    '../images/icons/profile-dark.png',
-    import.meta.url
-  );
+  select.switchThemeButton.firstElementChild.src = sun;
+  select.gitImgBox.src = githubLight;
+  select.profileImg.src = profileDark;
 };
 
 function loadTheme(theme) {

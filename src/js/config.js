@@ -40,7 +40,7 @@ export const select = {
 
   // Theme
   switchThemeButton: document.querySelector('.section-home__box--theme-switch'),
-  gitImgBox: document.querySelector('.link-btn__icon'),
+  gitImgBox: document.querySelector('.link-btn__icon--github'),
   profileImg: document.querySelector('.intro-box__image'),
 
   // Certificates
@@ -49,7 +49,7 @@ export const select = {
 
   // Others
   techStackIcons: document.querySelectorAll('tbody img'),
-  githubIcon: document.querySelector('.section-home__box--github '),
+  githubIcon: document.querySelector('.section-home__box--github'),
   linkedinIcon: document.querySelector('.section-home__box--linkedin '),
   counter: document.getElementById('count'),
   root: document.querySelector(':root'),

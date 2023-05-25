@@ -5,7 +5,7 @@
   "default": "index.html",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html --dist-dir ./dist"
   },
   "author": "Marcin Matczak",
   "license": "ISC",
@@ -17,6 +17,7 @@
   "dependencies": {
     "certificates": "^1.2.0",
     "contact": "^0.3.2",
+    "core-js": "^3.30.2",
     "countapi-js": "^1.0.2",
     "img": "^3.0.3",
     "sass": "^1.62.0"
