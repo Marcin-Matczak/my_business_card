@@ -5,7 +5,6 @@ import {} from './utils.js';
 import {} from './sections/certificates.js';
 import {} from './sections/contact.js';
 import {} from './sections/projects.js';
-import {} from './sections/visitors.js';
 
 const init = function () {
   // Theme switch functionality
