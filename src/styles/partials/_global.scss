@@ -15,24 +15,26 @@ body {
   box-shadow: 10px 10px 17px -5px var(--shadow);
   @include center();
 
-  @media (min-width: map-get($breakpoints, "xs")) {
-    height: 653px;
-    width: 340px;
-  }
-  @media (min-width: map-get($breakpoints, "sm")) {
-    height: 930px;
-    width: 482px;
-  }
-  @media (min-width: map-get($breakpoints, "md")) {
-    height: 752px;
-    width: 754px;
-  }
-  @media (min-width: map-get($breakpoints, "lg")) {
-    height: 704px;
-    width: 966px;
-  }
+
   @media (min-width: map-get($breakpoints, "xl")) {
     height: 860px;
     width: 1170px;
   }
+
+  @media (max-width: map-get($breakpoints, "lg")) {
+    height: 752px;
+    width: 754px;
+  }
+
+  @media (max-width: map-get($breakpoints, "md")) {
+    height: 930px;
+    width: 482px;
+    margin-top: 15%;
+  }
+
+  @media (max-width: map-get($breakpoints, "sm")) {
+    height: 653px;
+    width: 340px;
+    margin-top: 15%;
+  } 
 }
