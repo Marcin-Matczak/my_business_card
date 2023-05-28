@@ -291,6 +291,49 @@
   50% { border-color: var(--text) }
 }
 
+/* New project class */
+
+.new {
+  position: relative;
+}
+
+.new::before {
+  background-color: red;
+  border-radius: 50%;
+  content: "new!";
+  color: white;
+  position: absolute;
+  @include flex(center, center, center);
+
+  @media (max-width: map-get($breakpoints, "md")){
+    display: none;
+  }
+
+  @media (max-width: map-get($breakpoints, "lg")){
+    font-size: 10px;
+    height: 17px;
+    left: 38px;
+    top: -6px;
+    width: 29px;
+  }
+
+  @media (min-width: map-get($breakpoints, "lg")){
+    font-size: 11px;
+    height: 18px;
+    left: -21px;
+    top: -14px;
+    width: 28px;
+  }
+
+  @media (min-width: map-get($breakpoints, "xl")){
+    font-size: 12px;
+    height: 20px;
+    left: -30px;
+    top: -14px;
+    width: 32px;
+  }
+}
+
 
 /* Tags size */
 
@@ -380,22 +423,22 @@
 }
 @media (min-width: map-get($breakpoints, "xl")){
   .tag-size-1 {
-  font-size: 12px;
-}
+    font-size: 12px;
+  }
 
-.tag-size-2 {
-  font-size: 16px;
-}
+  .tag-size-2 {
+    font-size: 16px;
+  }
 
-.tag-size-3 {
-  font-size: 16px;
-}
+  .tag-size-3 {
+    font-size: 16px;
+  }
 
-.tag-size-4 {
-  font-size: 18px;
-}
+  .tag-size-4 {
+    font-size: 18px;
+  }
 
-.tag-size-5 {
-  font-size: 20px;
-}
+  .tag-size-5 {
+    font-size: 20px;
+  }
 }

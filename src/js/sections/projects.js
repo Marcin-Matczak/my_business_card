@@ -49,6 +49,8 @@ const generateTitleLinks = function (customSelector = '') {
 
   for (let link of links) {
     link.addEventListener('click', titleClickHandler);
+    if (link.getAttribute('href') === '#project-10') link.classList.add('new');
+    if (link.getAttribute('href') === '#project-4') link.classList.add('new');
   }
 };
 
