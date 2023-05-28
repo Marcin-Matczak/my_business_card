@@ -51,39 +51,17 @@
     @include flex(row, center, center);
   }
 
-  &--rotation-x {
+  &--popup-descr {
     &:hover {
-      transform: rotateX(360deg);
-      transition: transform 0.7s ease-in 0.5s;
-      
+      transform: rotateX(0deg);    
       .link-btn__description {    
         border-radius: 5px;
         height: 100%;
-        transition: visibility 0s ease-in 1.1s;  
+        width: 100%;
+        transition: visibility 0s ease-in 0.8s;  
         visibility: visible;
         width: 100%;       
       }
-
-      .link-btn__icon {
-        filter: blur(1.5px);
-      }
-    }
-  }
-
-  &--rotation-y {  
-
-    &:hover {
-      transform: rotateY(360deg);
-      transition: transform 0.7s ease-in 0.5s;
-    
-      .link-btn__description {  
-        border-radius: 50%;
-        height: 100%;
-        transition: visibility 0s ease-in 1.1s;    
-        visibility: visible;
-        width: 100%;    
-      }
-  
       .link-btn__icon {
         filter: blur(1.5px);
       }
