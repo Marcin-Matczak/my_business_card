@@ -6,6 +6,8 @@ body {
   background-color: var(--bg);
   font-family: $font-text;
   margin: 0;
+  @include flex(none, center, center);
+  position: relative;
 }
 
 .main {
@@ -13,7 +15,7 @@ body {
   border: 2px solid var(--shadow);
   border-radius: $radius;
   box-shadow: 10px 10px 17px -5px var(--shadow);
-  @include center();
+  position: relative;
 
   @media (min-width: map-get($breakpoints, "xs")) {
     height: 653px;
@@ -36,10 +38,5 @@ body {
   @media (min-width: map-get($breakpoints, "xl")) {
     height: 860px;
     width: 1170px;
-  }
-
-  @media (max-width: map-get($breakpoints, "md")) {
-    margin-top: 20em
-  }
-  
+  }  
 }  
